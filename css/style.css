@@ -1,0 +1,50 @@
+/* Fonts */
+
+@font-face{
+    font-family: "Roboto";
+    src: url("../fonts/roboto.woff2") format("woff2"),
+     url("../fonts/roboto.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url("../fonts/robotomedium.woff2") format("woff2"),
+     url("../fonts/robotomedium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url("../fonts/robotobold.woff2") format("woff2"),
+     url("../fonts/robotobold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+   
+
+    --main-text-black: #000000;
+    --main-paragraph: #283136;
+    --basic-dark: #666666;
+    
+    --main-bg-color: #ffffff;
+    --secondary-bg-color: #EEEEEE;
+
+    --main-button: #FB565A;
+    --button-active: #E74246;
+    --button-press: #D7373B;
+
+    --special-apps: #00CA74;
+    --special-apps-active: #00CA74;
+    --special-apps-press: #00CA74;
+
+    --special-presentation: #EFC849;
+    --special-presentation-active: #EFC849;
+    --special-presentation-press: #EFC849;
+}
