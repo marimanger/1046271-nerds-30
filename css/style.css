@@ -38,13 +38,14 @@
 
     --main-button: #FB565A;
     --button-active: #E74246;
-    --button-press: #D7373B;
+    --button-click: #D7373B;
 
     --special-apps: #00CA74;
     --special-apps-active: #00CA74;
-    --special-apps-press: #00CA74;
+    --special-apps-click: #00CA74;
 
     --special-presentation: #EFC849;
     --special-presentation-active: #EFC849;
-    --special-presentation-press: #EFC849;
+    --special-presentation-click: #EFC849;
+
 }
