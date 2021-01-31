@@ -225,7 +225,7 @@ body {
   background-position: top;
 
 }
-/* green and yellow buttons */
+/* Green and Yellow buttons */
 
 .apps-green {
   background-color: var(--button-apps-main);
@@ -258,4 +258,101 @@ body {
 }
 
 /* About */
+
+.about h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  text-align: left;
+
+}
+
+.about p {
+  color: var(--main-paragraph);
+  text-align: left;
+
+}
+
+.about h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+
+}
+
+.about-list {
+color: var(--main-paragraph);
+
+}
+
+/* Benefits */
+
+.benefits{
+  background-image: url("../img/nerds-illustration.png");
+  background-repeat: no-repeat;
+  background-size: 360px auto;
+  background-position: top;
+
+}
+
+.benefits h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+.benefits-list dt {
+  line-height: 18px;
+  color: var(--main-paragraph);
+
+}
+
+.benefit-number {
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+
+}
+
+.benefit-symbol {
+  font-size: 26px;
+
+}
+
+/* Work Examples */
+
+.work-example-item {
+  opacity: 0.2;
+}
+
+.work-example-item:hover {
+  opacity: 1;
+
+}
+
+.work-example-item:active {
+  opacity: 0.1;
+
+}
+
+/* Footer */
+
+.phone-number a {
+  text-decoration: none;
+  color: var(--basic-dark);
+
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.address, .phone-number{
+  line-height: 16px;
+  color: var(--basic-dark);
+
+}
 
