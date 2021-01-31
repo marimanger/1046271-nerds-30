@@ -22,6 +22,7 @@
     url("../fonts/robotobold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+
 }
 
 /* Variables */
@@ -42,14 +43,15 @@
   --button-active: #D7373B;
 
   --button-apps-main: #00CA74;
-  --button-apps-hover: #00CA74;
-  --button-apps-active: #00CA74;
+  --button-apps-hover: #00BC6C;
+  --button-apps-active: #00AA62;
 
   --button-presentation-main: #EFC849;
-  --button-presentation-hover: #EFC849;
-  --button-presentation-active: #EFC849;
+  --button-presentation-hover: #EAB534;
+  --button-presentation-active: #E5A722;
 
   --social-icon-main: #E1E1E1;
+
 }
 
 /* Global */
@@ -64,41 +66,196 @@ body {
   font-weight: 400;
   color: var(--main-text-black);
   background-color: var(--main-bg-color);
+
 }
 
 
 /* Navigation */
 .main-header {
   background-color: var(--secondary-bg-color) ;
+
 }
 
 .navigation a {
   text-decoration: none;
   color: var(--main-text-black) ;
+
 }
 
 .navigation a:hover {
   color: var(--button-main);
+
 }
 
 .navigation a:active {
   color: var(--main-text-black);
-  opacity: 30%;
+  opacity: 0.3;
+
 }
 
 .navigation a:current {
   color: var(--main-text-black);
   text-decoration: underline;
   text-decoration-color: var(--button-active);
+
 }
 
 .navigation {
   font-weight: 500;
   text-transform: uppercase;
+
 }
 
 .nav-list {
   list-style: none;
+
 }
 
+/* Slider */
+
+.slider {
+  background-color: var(--secondary-bg-color);
+
+}
+
+.slider h2 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  text-align: left;
+
+}
+
+.slider p {
+  color: var(--main-paragraph);
+  text-align: left;
+
+}
+
+.slider a {
+  text-decoration: none;
+
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--main-bg-color);
+  background-color: var(--button-main);
+  border: none;
+
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+
+}
+
+.button:active {
+  opacity: 0.3;
+  background-color: var(--button-active);
+}
+
+.slider-1 {
+  background-color: var(--secondary-bg-color);
+  background-image: url("../img/slider/slide-1.png");
+  background-repeat: no-repeat;
+  background-position: right, 0 0;
+
+}
+
+.slider-2 {
+  background-color: var(--secondary-bg-color);
+  background-image: url("../img/slider/slide-2.png");
+  background-repeat: no-repeat;
+  background-position: right, 0 0;
+
+}
+.slider-3 {
+  background-color: var(--secondary-bg-color);
+  background-image: url("../img/slider/slide-3.png");
+  background-repeat: no-repeat;
+  background-position: right, 0 0;
+
+}
+
+/* Services */
+
+.services a {
+  text-decoration: none;
+
+}
+
+.services h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.services p {
+  color: var(--main-paragraph);
+  text-align: left;
+}
+
+.services-sites {
+  background-color: var(--secondary-bg-color);
+  background-image: url("../img/services-1.png");
+  background-repeat: no-repeat;
+  background-size: 300px 146px;
+  background-position: top;
+
+}
+
+.services-apps {
+  background-color: var(--secondary-bg-color);
+  background-image: url("../img/services-2.png");
+  background-repeat: no-repeat;
+  background-size: 300px 146px;
+  background-position: top;
+
+}
+
+.services-presentations {
+  background-color: var(--secondary-bg-color);
+  background-image: url("../img/services-3.png");
+  background-repeat: no-repeat;
+  background-size: 300px 146px;
+  background-position: top;
+
+}
+/* green and yellow buttons */
+
+.apps-green {
+  background-color: var(--button-apps-main);
+
+}
+
+.apps-green:hover {
+  background-color: var(--button-apps-hover);
+
+}
+
+.apps-green:active {
+  opacity: 0.3;
+  background-color: var(--button-apps-active);
+}
+
+.presentation-yellow {
+  background-color: var(--button-presentation-main);
+
+}
+
+.presentation-yellow:hover {
+  background-color: var(--button-presentation-hover);
+}
+
+.presentation-yellow:active {
+  opacity: 0.3;
+  background-color: var(--button-presentation-active);
+
+}
+
+/* About */
 
