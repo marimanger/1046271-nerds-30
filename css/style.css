@@ -1,51 +1,104 @@
 /* Fonts */
 
-@font-face{
-    font-family: "Roboto";
-    src: url("../fonts/roboto.woff2") format("woff2"),
-     url("../fonts/roboto.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-@font-face{
-    font-family: "Roboto";
-    src: url("../fonts/robotomedium.woff2") format("woff2"),
-     url("../fonts/robotomedium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
-@font-face{
-    font-family: "Roboto";
-    src: url("../fonts/robotobold.woff2") format("woff2"),
-     url("../fonts/robotobold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Variables */
 
 :root {
-   
 
-    --main-text-black: #000000;
-    --main-paragraph: #283136;
-    --basic-dark: #666666;
-    
-    --main-bg-color: #ffffff;
-    --secondary-bg-color: #EEEEEE;
 
-    --main-button: #FB565A;
-    --button-active: #E74246;
-    --button-click: #D7373B;
+  --main-text-black: #000000;
+  --main-paragraph: #283136;
+  --basic-dark: #666666;
+  --main-logo-hover: #A6A6A6;
 
-    --special-apps: #00CA74;
-    --special-apps-active: #00CA74;
-    --special-apps-click: #00CA74;
+  --main-bg-color: #FFFFFF;
+  --secondary-bg-color: #EEEEEE;
 
-    --special-presentation: #EFC849;
-    --special-presentation-active: #EFC849;
-    --special-presentation-click: #EFC849;
+  --button-main: #FB565A;
+  --button-hover: #E74246;
+  --button-active: #D7373B;
 
+  --button-apps-main: #00CA74;
+  --button-apps-hover: #00CA74;
+  --button-apps-active: #00CA74;
+
+  --button-presentation-main: #EFC849;
+  --button-presentation-hover: #EFC849;
+  --button-presentation-active: #EFC849;
+
+  --social-icon-main: #E1E1E1;
 }
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--main-text-black);
+  background-color: var(--main-bg-color);
+}
+
+
+/* Navigation */
+.main-header {
+  background-color: var(--secondary-bg-color) ;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--main-text-black) ;
+}
+
+.navigation a:hover {
+  color: var(--button-main);
+}
+
+.navigation a:active {
+  color: var(--main-text-black);
+  opacity: 30%;
+}
+
+.navigation a:current {
+  color: var(--main-text-black);
+  text-decoration: underline;
+  text-decoration-color: var(--button-active);
+}
+
+.navigation {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+
