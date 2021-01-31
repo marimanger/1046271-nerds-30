@@ -142,6 +142,7 @@ body {
   text-align: center;
   vertical-align: middle;
   color: var(--main-bg-color);
+  text-decoration: none;
   background-color: var(--button-main);
   border: none;
 
@@ -356,3 +357,15 @@ color: var(--main-paragraph);
 
 }
 
+
+.friends-offer h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+
+}
+
+.friends-offer p {
+  color: var(--main-paragraph);
+
+}
