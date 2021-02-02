@@ -59,7 +59,6 @@
 body {
   min-width: 960px;
   margin: 0;
-  padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -119,8 +118,8 @@ body {
 }
 
 .slider h2 {
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 3.43em; /* 55px; */
+  line-height: 100%; /* 55px; */
   font-weight: 500;
   text-align: left;
 
@@ -189,8 +188,8 @@ body {
 }
 
 .services h3 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5em; /* 24px; */
+  line-height: 125%; /* 30px; */
   font-weight: 700;
   text-align: left;
 }
@@ -261,8 +260,8 @@ body {
 /* About */
 
 .about h2 {
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 2.8em; /* 45px; */
+  line-height: 100%;
   font-weight: 500;
   text-align: left;
 
@@ -309,8 +308,8 @@ color: var(--main-paragraph);
 }
 
 .benefit-number {
-  font-size: 45px;
-  line-height: 64px;
+  font-size: 2.8em;
+  line-height: 142%;
   font-weight: 700;
 
 }
@@ -345,8 +344,8 @@ color: var(--main-paragraph);
 }
 
 .contact-info h3 {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.12em; /* 18px; */
+  line-height: 166%; /* 30px; */
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -359,13 +358,16 @@ color: var(--main-paragraph);
 
 
 .friends-offer h3 {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 2.25em; /* 36px; */
+  line-height: 100%; /* 36px; */
   font-weight: 700;
 
 }
 
 .friends-offer p {
   color: var(--main-paragraph);
-
 }
+
+
+/* Catalog */
+
