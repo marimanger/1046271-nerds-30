@@ -102,13 +102,6 @@ body {
 
 }
 
-.navigation a:current {
-  color: var(--main-text-black);
-  text-decoration: underline;
-  text-decoration-color: var(--button-active);
-
-}
-
 .navigation {
   font-weight: 500;
   text-transform: uppercase;
@@ -376,6 +369,7 @@ color: var(--main-paragraph);
 
 .friends-offer p {
   color: var(--main-paragraph);
+
 }
 
 
@@ -416,6 +410,7 @@ color: var(--main-paragraph);
   list-style: none;
   font-size: inherit;
   color: var(--main-paragraph);
+
 }
 
 .button-second {
@@ -462,14 +457,17 @@ color: var(--main-paragraph);
 .sort-value {
 color: var var(--main-text-black);
 opacity: 0.3;
+
 }
 
 .sort-value:hover {
   opacity: 0.6;
+
 }
 
 .sort-value:active {
   opacity: 1;
+
 }
 
 /* Catalog */
@@ -531,8 +529,9 @@ opacity: 0.3;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.pagination-item-current a{
+.pagination-item-current a {
  border: 3px solid;
  border-color:var(--pagination-grey);
+
 }
 
