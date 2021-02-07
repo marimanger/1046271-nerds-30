@@ -175,6 +175,7 @@ body {
   text-decoration: none;
   background-color: var(--button-main);
   border: none;
+  text-transform: uppercase;
 
 }
 
@@ -228,10 +229,13 @@ body {
 }
 
 .services h3 {
-  font-size: 1.5em; /* 24px; */
-  line-height: 125%; /* 30px; */
+  font-size: 24px;
+  line-height: 30px;
   font-weight: 700;
   text-align: left;
+  text-transform: uppercase;
+
+
 }
 
 .services p {
@@ -542,14 +546,14 @@ opacity: 0.3;
 
 /* Catalog */
 
-.catalog-item {
+/* /* .catalog-item {
     background-image: url("../img/catalog/browser.svg");
     background-repeat: no-repeat;
     background-position: top, 0 0;
 
-}
 
-/* как сделать наведение другого цвета если картинка browser svg декоративная? */
+} */
+
 
 
 .item-name {
