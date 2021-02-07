@@ -104,6 +104,7 @@ body {
 
 }
 
+
 .main-container, .main-footer {
   width: 1157px;
   margin: 0 auto;
@@ -448,6 +449,13 @@ body {
 
 
 /* Catalog */
+
+.item-current {
+
+  border-bottom: 4px solid var(--button-main);
+
+}
+
 
 .title-catalog {
   font-size: 3.43em; /* 55px; */
