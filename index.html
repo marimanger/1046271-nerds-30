@@ -14,19 +14,21 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="navigation">
-      <a class="header-logo">
-        <img src="./img/nerds-logo.svg" width="159" height="65" alt="Логотип дизайн студии Нердс">
-      </a>
-      <ul class="nav-list" >
-        <li class="nav-item"> <a class="nav-link" href="blank.html">Студия</a></li>
-        <li class="nav-item"> <a class="nav-link" href="blank.html">Клиенты</a></li>
-        <li class="nav-item"> <a class="nav-link" href="catalog.html">Магазин</a></li>
-        <li class="nav-item"> <a class="nav-link"href="blank.html">Контакты</a></li>
-      </ul>
-      <a class="nav-bag" href="blank.html">Корзина</a>
+     <div class="main-navigation-wrapper">
+       <a class="header-logo">
+         <img src="./img/nerds-logo.svg" width="159" height="65" alt="Логотип дизайн студии Нердс">
+       </a>
+       <ul class="nav-list" >
+         <li class="nav-item"> <a class="nav-link" href="blank.html">Студия</a></li>
+         <li class="nav-item"> <a class="nav-link" href="blank.html">Клиенты</a></li>
+         <li class="nav-item"> <a class="nav-link" href="catalog.html">Магазин</a></li>
+         <li class="nav-item"> <a class="nav-link"href="blank.html">Контакты</a></li>
+       </ul>
+       <a class="nav-bag" href="blank.html">Корзина</a>
+     </div>
     </nav>
   </header>
-  <main class="main">
+  <main class="main-container">
     <h1>Дизайн студия Нердс</h1>
     <section class="slider">
       <article class="slider-1" >
@@ -47,57 +49,65 @@
     </section>
     <section class="services">
       <h2>Услуги</h2>
-      <article class="services-sites">
-        <h3> Веб сайты</h3>
-        <p>Мир никогда не будет прежним&nbsp;после того как увидит ваш сайт!</p>
-        <a class="button" href="blank.html">Заказать</a>
-      </article>
-      <article class="services-apps">
-        <h3>Приложения</h3>
-        <p>Покорите топ-10 приложений&nbsp;в AppStore и Google Play</p>
-        <a class="button apps-green"href="blank.html">Заказать</a>
-      </article>
-      <article class="services-presentations">
-        <h3>Презентации</h3>
-        <p>Вы даже не подозреваете,&nbsp;насколько вы изумительны!</p>
-        <a class="button presentation-yellow" href="blank.html">Заказать</a>
-      </article>
+      <div class="services-wrap">
+       <article class="services-sites">
+         <h3> Веб сайты</h3>
+         <p>Мир никогда не будет прежним&nbsp;после того как увидит ваш сайт!</p>
+         <a class="button" href="blank.html">Заказать</a>
+       </article>
+       <article class="services-apps">
+         <h3>Приложения</h3>
+         <p>Покорите топ-10 приложений&nbsp;в AppStore и Google Play</p>
+         <a class="button apps-green"href="blank.html">Заказать</a>
+       </article>
+       <article class="services-presentations">
+         <h3>Презентации</h3>
+         <p>Вы даже не подозреваете,&nbsp;насколько вы изумительны!</p>
+         <a class="button presentation-yellow" href="blank.html">Заказать</a>
+       </article>
+       </div>
     </section>
-    <section class="about">
-      <h2>Мы — маленькая, но гордая&nbsp;дизайн-студия из Краснодара.</h2>
-      <p> Исповедуем принципы минимализма и чистоты. Ставим математический расчет&nbsp;превыше креатива. Работаем не
+
+    <div class="about-wrap">
+
+     <section class="about">
+       <h2>Мы — маленькая, но гордая&nbsp;дизайн-студия из Краснодара.</h2>
+       <p> Исповедуем принципы минимализма и чистоты. Ставим математический расчет&nbsp;превыше креатива. Работаем не
         покладая рук, как роботы.</p>
-      <h3>Выполняем заказы на разработку:</h3>
-      <ul class="about-list">
-        <li class="about-list-item" >Веб-сайтов любой сложности</li>
-        <li class="about-list-item"> Мобильных приложений для iOS и Android</li>
-        <li class="about-list-item">Слайдшоу и видео для корпоративных презентаций</li>
-      </ul>
-    </section>
-    <section class="benefits">
-      <h3>с 2004 года Любим точность во всем:</h3>
-      <dl class="benefits-list">
-        <dt>Уровень&nbsp;самоотдачи</dt>
-        <dd class="benefit-number">146<sup class="benefit-symbol">%</sup></dd>
+       <h3>Выполняем заказы на разработку:</h3>
+       <ul class="about-list">
+         <li class="about-list-item" >Веб-сайтов любой сложности</li>
+         <li class="about-list-item"> Мобильных приложений для iOS и Android</li>
+         <li class="about-list-item">Слайдшоу и видео для корпоративных презентаций</li>
+       </ul>
+     </section>
+     <section class="benefits">
+       <h3>с 2004 года Любим точность во всем:</h3>
+       <dl class="benefits-list">
+         <dt>Уровень&nbsp;самоотдачи</dt>
+         <dd class="benefit-number">146<sup class="benefit-symbol">%</sup></dd>
 
-        <dt>Соблюдение&nbsp;сроков</dt>
-        <dd class="benefit-number">100<sup class="benefit-symbol">%</sup></dd>
+         <dt>Соблюдение&nbsp;сроков</dt>
+         <dd class="benefit-number">100<sup class="benefit-symbol">%</sup></dd>
 
-        <dt>Минимальная&nbsp;предоплата</dt>
-        <dd class="benefit-number">50<sup class="benefit-symbol">%</sup></dd>
-      </dl>
-    </section>
+         <dt>Минимальная&nbsp;предоплата</dt>
+         <dd class="benefit-number">50<sup class="benefit-symbol">%</sup></dd>
+       </dl>
+     </section>
+
+    </div>
+
     <section class="work-example">
-      <a class="work-example-item" href="blank.html">
+      <a class="work-example-item academy-logo" href="blank.html">
         <img src="./img/html-academy-logo.svg" width="199" height="67" alt="Пример сайта HTML Академия">
       </a>
-      <a class="work-example-item" href="blank.html">
+      <a class="work-example-item barbershop-logo" href="blank.html">
         <img src="./img/barbershop-logo.png" width="209" height="90" alt="Пример сайта Барбер шоп Бородинский">
       </a>
-      <a class="work-example-item"href="blank.html">
+      <a class="work-example-item pink-logo"href="blank.html">
         <img src="./img/pink-logo.png" width="185" height="52" alt="Пример сайта Пинк">
       </a>
-      <a class="work-example-item" href="blank.html">
+      <a class="work-example-item mishka-logo" href="blank.html">
         <img src="./img/mishka-logo.png" width="173" height="84" alt="Пример сайта Мишка">
       </a>
     </section>
@@ -112,13 +122,18 @@
         <a class="button" href="blank.html">Напишите нам</a>
       </section>
     </div>
-    <a class="social-button vk" href="https://vk.com/">Vk</a>
-    <a class="social-button fb" href="https://www.facebook.com">Facebook</a>
-    <a class="social-button inst" href="https://www.instagram.com">Instagram</a>
-    <section class="friends-offer">
-      <h3>Давайте дружить, это выгодно!</h3>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+    <div class="social-wrapper">
+    <section>
+     <a class="social-button vk" href="https://vk.com/">Vk</a>
+     <a class="social-button fb" href="https://www.facebook.com">Facebook</a>
+     <a class="social-button inst" href="https://www.instagram.com">Instagram</a>
     </section>
+
+     <section class="friends-offer">
+       <h3>Давайте дружить, это выгодно!</h3>
+       <p>Скидка 10% для друзей из социальных сетей.</p>
+     </section>
+    </div>
   </footer>
 </body>
 
