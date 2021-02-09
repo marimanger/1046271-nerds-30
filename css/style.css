@@ -86,6 +86,16 @@ body {
 /* Grid */
 .page {
   height: 100%;
+
+}
+
+/* Grid Catalogue */
+.main-inner-page {
+ display: grid;
+ grid-template-columns: 260px 1fr;
+ align-content: start;
+ column-gap: 140px;
+
 }
 
 /* Navigation */
@@ -104,8 +114,8 @@ body {
 
 }
 
-
-.main-container, .main-footer {
+.main-container,
+.main-footer {
   width: 1157px;
   margin: 0 auto;
   padding: 0 10px;
@@ -130,8 +140,6 @@ body {
 }
 
 .navigation {
-  margin: 0;
-  padding: 0;
   font-weight: 500;
   text-transform: uppercase;
 
@@ -417,7 +425,8 @@ body {
   background-color: var(--main-bg-colors);
 }
 
-.address, .phone-number {
+.address,
+.phone-number {
   line-height: 1em;
   color: var(--basic-dark);
 
@@ -522,6 +531,12 @@ body {
 
 /* Sort */
 
+.sort-by {
+  margin: 0;
+  padding: 0;
+
+}
+
 .sort-by p {
   font-size: 1.25em; /* 18px; */
   line-height: 166%; /* 30px; */
@@ -554,27 +569,20 @@ opacity: 0.3;
 
 /* Catalog */
 
-/* /* .catalog-item {
-    background-image: url("../img/catalog/browser.svg");
-    background-repeat: no-repeat;
-    background-position: top, 0 0;
-
-
-} */
-
-
-
 .item-name {
   font-size: 1.125em;
   text-transform: uppercase;
+
 }
 
 .item-name:hover {
   color: var(--button-hover);
+
 }
 
 .catalog-price p {
   color: var(--basic-dark);
+
 
 }
 
