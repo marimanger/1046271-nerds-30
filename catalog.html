@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-  <link rel="icon" href="./img/favicon/favicon.svg" type="image/svg+×ml">
+  <link rel="icon" href="./img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicon/avicon/favicon-apple.png"><!-- 180×180 -->
   <link href="./css/normalize.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <title>Нёрдс</title>
 </head>
 
-<body class="page-body">
+<body class="page-body catalog-page">
   <header class="main-header">
     <nav class="navigation">
-      <a class="header-logo" href="index.html">
-        <img src="./img/nerds-logo.svg" width="159" height="65" alt="Логотип дизайн студии Нердс">
-      </a>
-      <ul class="nav-list" >
-        <li class="nav-item"> <a class="nav-link" href="blank.html">Студия</a></li>
-        <li class="nav-item"> <a class="nav-link" href="blank.html">Клиенты</a></li>
-        <li class="nav-item current-page"> <a class="nav-link" href="catalog.html">Магазин</a></li>
-        <li class="nav-item"> <a class="nav-link"href="blank.html">Контакты</a></li>
-      </ul>
-      <a class="nav-item nav-bag" href="blank.html">Корзина</a>
+      <div class="main-navigation-wrapper">
+        <a class="header-logo" href="index.html">
+          <img src="./img/nerds-logo.svg" width="159" height="65" alt="Логотип дизайн студии Нердс">
+        </a>
+        <ul class="nav-list" >
+          <li class="nav-item"> <a class="nav-link" href="blank.html">Студия</a></li>
+          <li class="nav-item"> <a class="nav-link" href="blank.html">Клиенты</a></li>
+          <li class="nav-item"> <a class="nav-link item-current" href="catalog.html">Магазин</a></li>
+          <li class="nav-item"> <a class="nav-link" href="blank.html">Контакты</a></li>
+        </ul>
+        <a class="nav-bag" href="blank.html">Корзина</a>
+      </div>
     </nav>
     <h1 class="title-catalog">Магазин готовых шаблонов</h1>
   </header>
-  <main class="main-catalog">
+
+  <main class="main-inner-page main-container">
     <section class="filters">
       <p>Cтоимость:</p>
       <form class="filter-range" action="https://echo.htmlacademy.ru/" method="get">
@@ -81,27 +84,28 @@
         <button class="button-second" type="submit">Показать</button>
       </form>
     </section>
-    <section class="sort-by">
-      <p>Сортировать:</p>
-      <ul>
-        <li class="sort-value price">
-          <a>по цене</a>
-        </li>
-        <li class="sort-value type">
-          <a>по типу</a>
-        </li>
-        <li class="sort-value name">
-          <a>по названию</a>
-        </li>
-      </ul>
-    </section>
-    <section class="catalog-main">
+  <div class="sort-catalogue-wrapper">
+     <section class="sort-by">
+       <p>Сортировать:</p>
+       <ul>
+         <li class="sort-value price">
+           <a>по цене</a>
+         </li>
+         <li class="sort-value type">
+           <a>по типу</a>
+         </li>
+         <li class="sort-value name">
+           <a>по названию</a>
+         </li>
+       </ul>
+     </section>
+     <section class="catalog-main">
       <article class="catalog-item">
         <img src=".//img/catalog/sedona.jpg" width="360" height="578" alt="Седона">
         <div class="catalog-price">
           <h3 class="item-name">Sedona</h3>
           <p>Информационный&nbsp;сайт для туристов</p>
-          <a class="button price" class="button" href="#">9900₽</a>
+          <a class="button price button" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
@@ -144,7 +148,8 @@
           <a class="button price" href="#">9900₽</a>
         </div>
       </article>
-    </section class="pagination">
+     </section>
+    <section class="pagination">
     <ul class="pagination-list">
       <li class="pagination-item-current">
         <a href="#">1</a>
@@ -159,8 +164,10 @@
         <a class="button-second" href="#">следующая</a>
       </li>
     </ul>
+    </section>
+  </div>
   </main>
-  <footer>
+  <footer class="main-footer">
     <div>
       <!-- тут будет карта -->
       <section class="contact-info">
@@ -170,14 +177,18 @@
         <a class="button" href="blank.html">Напишите нам</a>
       </section>
     </div>
-    <a class="social-button vk" href="https://vk.com/">Vk</a>
-    <a class="social-button fb" href="https://www.facebook.com">Facebook</a>
-    <a class="social-button inst" href="https://www.instagram.com">Instagram</a>
-    <section class="friends-offer">
-      <h3>Давайте дружить, это выгодно!</h3>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+    <div class="social-wrapper">
+    <section>
+     <a class="social-button vk" href="https://vk.com/">Vk</a>
+     <a class="social-button fb" href="https://www.facebook.com">Facebook</a>
+     <a class="social-button inst" href="https://www.instagram.com">Instagram</a>
     </section>
 
+     <section class="friends-offer">
+       <h3>Давайте дружить, это выгодно!</h3>
+       <p>Скидка 10% для друзей из социальных сетей.</p>
+     </section>
+    </div>
   </footer>
 </body>
 
