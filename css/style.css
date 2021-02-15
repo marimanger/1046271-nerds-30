@@ -83,6 +83,19 @@ body {
 
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Grid */
 .page {
   height: 100%;
@@ -111,6 +124,15 @@ body {
 
 
 /* Navigation */
+
+.main-container,
+.main-footer {
+  width: 1157px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+}
+
 .main-header {
   background-color: var(--secondary-bg-color) ;
 
@@ -124,20 +146,34 @@ body {
   margin: 0 auto;
   padding: 0 10px;
 
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
 }
 
-.main-container,
-.main-footer {
-  width: 1157px;
-  margin: 0 auto;
-  padding: 0 10px;
+.nav-list a {
+  display: block;
+  padding: 82px 15px 20px;
+
+}
+
+.nav-bag a {
+  display: block;
+  padding: 82px 15px 20px;
 
 }
 
 .navigation a {
   text-decoration: none;
   color: var(--main-text-black) ;
+  display: block;
+  /* padding: 82px 15px 20px; */
 
 }
 
@@ -158,15 +194,37 @@ body {
 
 }
 
-.nav-list {
-  list-style: none;
+.header-logo {
+  padding: 49px 15px 20px;
 
 }
+
+.nav-bag .bag-link {
+  position: relative;
+  padding-left: 50px;
+
+  /* outline: 5px solid #ff0000; */
+}
+
+.bag-link::before {
+  content: "";
+  position: absolute;
+  top: 84px;
+  left: 17px;
+  width: 15px;
+  height: 15px;
+  background-image: url('../img/bag-icon.svg');
+  background-repeat: no-repeat;
+}
+
 
 /* Slider */
 
 .slider {
   background-color: var(--secondary-bg-color);
+  width: 1157px;
+  height: 431px;
+
 
 }
 
@@ -216,6 +274,8 @@ body {
   background-image: url("../img/slider/slide-1.png");
   background-repeat: no-repeat;
   background-position: right, 0 0;
+  width: 760px;
+  max-height: 430px;
 
 }
 
@@ -224,6 +284,7 @@ body {
   background-image: url("../img/slider/slide-2.png");
   background-repeat: no-repeat;
   background-position: right, 0 0;
+
 
 }
 .slider-3 {
@@ -447,7 +508,7 @@ body {
 
 .social-wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 360px 760px;
   margin: 63px 0px ;
   /* outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px; */
