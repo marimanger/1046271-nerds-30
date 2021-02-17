@@ -249,6 +249,7 @@ body {
 
 .button {
   font: inherit;
+  padding: 10px 30px;
   text-align: center;
   vertical-align: middle;
   color: var(--main-bg-color);
@@ -256,6 +257,7 @@ body {
   background-color: var(--button-main);
   border: none;
   text-transform: uppercase;
+  border-radius: 3px;
 
 }
 
@@ -299,15 +301,17 @@ body {
 
 .services a {
   text-decoration: none;
+  position: relative;
+  top: 20px;
 
 }
 
 .services-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 100px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  column-gap: 120px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
 }
 
@@ -326,32 +330,47 @@ body {
   text-align: left;
 }
 
-.services-sites {
-  background-color: var(--secondary-bg-color);
-  background-image: url("../img/services-1.png");
-  background-repeat: no-repeat;
-  background-size: 300px 146px;
-  background-position: top;
+.service-item {
+ padding: 15px 15px 40px 0px;
+ margin-bottom: 40px;
 
 }
 
-.services-apps {
-  background-color: var(--secondary-bg-color);
+
+
+.services-sites::before {
+  content: "";
+  background-image: url("../img/services-1.png");
+  background-color: var(--button-main);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 146px;
+  display: block;
+
+}
+
+.services-apps::before {
+  content: "";
+  background-color: var(--button-apps-main);
   background-image: url("../img/services-2.png");
   background-repeat: no-repeat;
-  background-size: 300px 146px;
-  background-position: top;
+  width: 100%;
+  height: 146px;
+  display: block;
 
 }
 
-.services-presentations {
-  background-color: var(--secondary-bg-color);
+.services-presentations::before{
+  content: "";
+  background-color: var(--button-presentation-main);
   background-image: url("../img/services-3.png");
   background-repeat: no-repeat;
-  background-size: 300px 146px;
-  background-position: top;
+  width: 100%;
+  height: 146px;
+  display: block;
 
 }
+
 /* Green and Yellow buttons */
 
 .apps-green {
@@ -387,21 +406,23 @@ body {
 /* About */
 .about-wrap {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 140px ;
-  margin-top: 60px;
-  margin-bottom: 74px;
+  grid-template-columns: 2fr 360px;
+  column-gap: 10px ;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-top: solid 2px var(--secondary-bg-color);
 
 }
 
 
 
 .about h2 {
-  padding: 0px;
-  margin: 0px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
+  margin: 0px;
+  padding: 25px 0px;
+
 
 
 }
@@ -409,6 +430,9 @@ body {
 .about p {
   color: var(--main-paragraph);
   text-align: left;
+  margin: 0;
+  padding-bottom: 25px;
+  padding-right: 100px;
 
 }
 
@@ -416,42 +440,78 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: left;
+  margin: 0;
+  padding: 25px 0px;
+}
+
+.about ul{
+  list-style: none;
 
 }
 
 .about-list {
-
-  color: var(--main-paragraph);
+  color: var(--main-paragraph)
+  list-style: none;
 
 }
 
+.about-list-item {
+  padding: 20px 0px;
+
+}
+
+.about-list-item::before {
+  content: "";
+  background-image: url('../img/list-bullet.svg');
+  background-repeat: no-repeat;
+  display: block;
+  width: 25px;
+  height: 2px;
+  left: -45px;
+  top: 12px;
+  position: relative;
+
+
+
+}
 /* Benefits */
 
-.benefits{
-  background-image: url("../img/nerds-illustration.png");
-  background-repeat: no-repeat;
-  background-size: 360px auto;
-  background-position: top;
 
+
+.benefit-wrap::before{
+  content: "";
+  display: block;
+  background-image: url("../img/nerds-illustration.png");
+  width: 360px;
+  min-height: 210px;
+  background-repeat: no-repeat;
 
 }
 
 .benefits h3 {
   font-weight: 700;
   text-transform: uppercase;
+  text-align: right;
+  margin: 0;
+  padding: 25px 0px;
+  width: fit-content;
 
 }
 
 .benefits-list dt {
   line-height: 18px;
   color: var(--main-paragraph);
+  display: flex;
 
 }
+
+
 
 .benefit-number {
   font-size: 2.8em;
   line-height: 142%;
   font-weight: 700;
+
 
 }
 
@@ -464,6 +524,8 @@ body {
 
 .work-example {
   display: grid;
+  align-items: center;
+  justify-content: space-around;
   grid-template-columns: repeat(4, 1fr);
 
 }
