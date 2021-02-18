@@ -404,17 +404,16 @@ body {
 }
 
 /* About */
+
 .about-wrap {
   display: grid;
-  grid-template-columns: 2fr 360px;
+  grid-template-columns: 2fr 365px;
   column-gap: 10px ;
   padding-top: 60px;
   padding-bottom: 60px;
   border-top: solid 2px var(--secondary-bg-color);
 
 }
-
-
 
 .about h2 {
   font-size: 45px;
@@ -428,6 +427,7 @@ body {
 }
 
 .about p {
+  font-size: inherit;
   color: var(--main-paragraph);
   text-align: left;
   margin: 0;
@@ -437,11 +437,12 @@ body {
 }
 
 .about h3 {
+  font-size: inherit;
   font-weight: 700;
   text-transform: uppercase;
   text-align: left;
   margin: 0;
-  padding: 25px 0px;
+  padding: 25px 0px 0px;
 }
 
 .about ul{
@@ -456,7 +457,7 @@ body {
 }
 
 .about-list-item {
-  padding: 20px 0px;
+  padding: 10px 0px;
 
 }
 
@@ -489,28 +490,42 @@ body {
 }
 
 .benefits h3 {
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
   margin: 0;
   padding: 25px 0px;
-  width: fit-content;
+  display: inline-block;
 
 }
 
 .benefits-list dt {
   line-height: 18px;
   color: var(--main-paragraph);
-  display: flex;
 
 }
 
+.benefits-list {
+  display: grid;
+  grid-template-rows: 33%;
+  align-items: center;
 
+}
+
+.benefit-name {
+  grid-row: 2;
+
+
+}
 
 .benefit-number {
   font-size: 2.8em;
   line-height: 142%;
   font-weight: 700;
+  grid-row: 1;
+  margin:0px;
+  padding-bottom: 15px;
 
 
 }
@@ -525,9 +540,12 @@ body {
 .work-example {
   display: grid;
   align-items: center;
-  justify-content: space-around;
+  justify-items: center;
   grid-template-columns: repeat(4, 1fr);
-
+  border-top: solid 2px var(--secondary-bg-color);
+  border-bottom: solid 2px var(--secondary-bg-color);
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .work-example-item {
@@ -547,15 +565,29 @@ body {
 
 /* Footer */
 
+.main-footer {
+ margin-top: 30px;
+
+}
+
+.contact-info {
+  padding: 15px;
+
+}
+
 .phone-number a {
   text-decoration: none;
   color: var(--basic-dark);
 
 }
 
+.phone-number {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
 .contact-info h3 {
-  font-size: 1.12em; /* 18px; */
-  line-height: 166%; /* 30px; */
+  font-size: inherit;
   font-weight: 700;
   text-transform: uppercase;
   background-color: var(--main-bg-colors);
@@ -563,8 +595,14 @@ body {
 
 .address,
 .phone-number {
-  line-height: 1em;
+  line-height: 18px;
   color: var(--basic-dark);
+
+}
+
+.contact-info
+.button {
+ width: 220px;
 
 }
 
@@ -572,6 +610,7 @@ body {
   display: grid;
   grid-template-columns: 360px 760px;
   margin: 63px 0px ;
+
   /* outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px; */
 }
@@ -591,6 +630,35 @@ body {
   color: var(--main-paragraph);
 
 }
+
+.footer-social ul{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+
+.social-button {
+  display: flex;
+  align-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--social-icon-main);
+
+}
+
+.social-button a {
+  align-items: center;
+
+}
+
 
 
 /* Catalog */
