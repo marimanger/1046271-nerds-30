@@ -35,13 +35,27 @@
 
   <main class="main-inner-page main-container">
     <section class="filters">
-      <p>Cтоимость:</p>
       <form class="filter-range" action="https://echo.htmlacademy.ru/" method="get">
-        <input type="range" min="0" max="100" value="70" step="10">
-        <label for="from-range">от</label>
-        <input type="number" id="from-range" value="0">
-        <label for="to-range">до</label>
-        <input type="number" id="to-range" value="15000">
+        <fieldset>
+          <legend>Стоимость:</legend>
+          <div class="filter-range">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style=" width: 30%; margin-left: 20%;" ></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="left: 20%;"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 50%;"></div>
+            </div>
+            <div class="price-controls">
+              <label for="from-range">
+               от <input type="number" id="min-range" value="0">
+              </label>
+              <label for="to-range">
+               до <input type="number" id="max-range" value="15000">
+               </label>
+            </div>
+          </div>
+        </fieldset>
         <fieldset>
           <legend class="filter-radio">Сетка:</legend>
           <ul class="filter-radio-list">
@@ -107,48 +121,48 @@
         <img src=".//img/catalog/sedona.jpg" width="360" height="578" alt="Седона">
         <div class="catalog-price">
           <h3 class="item-name">Sedona</h3>
-          <p>Информационный&nbsp;сайт для туристов</p>
-          <a class="button price button" href="#">9900₽</a>
+          <p>Информационный сайт<br>для туристов</p>
+          <a class="button price-button" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/pink.jpg" width="360" height="578" alt="Пинк">
         <div class="catalog-price">
           <h3 class="item-name">Pink</h3>
-          <p>Продуктовый лендинг&nbsp;приложения для iOS и Android</p>
-          <a class="button price" href="#">9900₽</a>
+          <p>Продуктовый лендинг<br>приложения для iOS и Android</p>
+          <a class="button price-button" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/barbershop.jpg" width="360" height="578" alt="Барбершоп">
-        <div class="catalog price">
+        <div class="catalog-price">
           <h3 class="item-name">Barbershop</h3>
-          <p>Сайт салона красоты.&nbsp;Для мужчин, да.</p>
-          <a class="button price" href="#">9900₽</a>
+          <p>Сайт салона красоты.<br>Для мужчин, да.</p>
+          <a class="button price-button" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/mishka.jpg" width="360" height="578" alt="Мишка">
         <div class="catalog-price">
           <h3 class="item-name">Mishka</h3>
-          <p>Интернет-магазин&nbsp;вязаных игрушек</p>
-          <a class="button price" href="#">9900₽</a>
+          <p>Интернет-магазин<br>вязаных игрушек</p>
+          <a class="button price-button" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/a-plus.jpg" width="360" height="578" alt="А Плюс">
-        <div class="catalog price">
+        <div class="catalog-price">
           <h3 class="item-name">A Plus</h3>
-          <p>Лендинг курсов повышения&nbsp;квалификации</p>
-          <a class="button price" href="#">9900₽</a>
+          <p>Лендинг курсов повышени<br>квалификации</p>
+          <a class="button price-button" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/kvast.jpg" width="360" height="578" alt="Кваст">
-        <div class="catalog price">
+        <div class="catalog-price">
           <h3 class="item-name">Кваст</h3>
-          <p>Промо-сайт производителя&nbsp;крафтового кваса</p>
-          <a class="button price" href="#">9900₽</a>
+          <p>Промо-сайт производителя<br>крафтового кваса</p>
+          <a class="button price-button" href="#">9900₽</a>
         </div>
       </article>
      </section>
@@ -163,7 +177,7 @@
       <li class="pagination-item">
         <a href="#">3</a>
       </li>
-      <li class="pagination-item-next">
+      <li class="pagination-item-button">
         <a class="button-second" href="#">следующая</a>
       </li>
     </ul>

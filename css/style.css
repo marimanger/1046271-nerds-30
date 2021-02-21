@@ -61,6 +61,13 @@
 
 --pagination-grey: #DBDBDB;
 
+/* filter */
+
+--filter-range-bar: #D7DCDF;
+--filter-range-controls: #ABABAB;
+
+--shadow: #CFCFCF;
+
 
 }
 
@@ -142,6 +149,7 @@ body {
 
 .wrapper {
   width: 1180px;
+  padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
 
@@ -634,7 +642,6 @@ body {
 .social-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 80px;
   margin: 63px 0px ;
 
   /* outline: 5px solid rgba(0, 255, 0, 0.7);
@@ -711,8 +718,11 @@ body {
 
 }
 
+
+/* filters */
+
 .filters {
- margin-top: 55px;
+ margin-top: 20px;
 
 }
 .filters p {
@@ -735,7 +745,6 @@ body {
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
-
 
 }
 
@@ -765,6 +774,86 @@ body {
 
 }
 
+/* range */
+
+.filter-range {
+  width: 260px;
+  margin-top: 49px;
+
+}
+
+.range-controls {
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 5px;
+  position: relative;
+
+}
+
+.range-controls .scale {
+  height: 2px;
+  background:var(--filter-range-bar);
+
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--button-apps-main);
+
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  background-color: var(--main-logo-hover);
+  border: 8px solid var(--main-bg-color);
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+
+}
+
+.price-controls input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  color: var(--main-paragraph);
+  border: none;
+  border-radius: 5px;
+  background: var(--secondary-bg-color);
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/* checkbox */
+
 .filter-input-checkbox + label::before {
  content: "";
  position: absolute;
@@ -792,7 +881,7 @@ body {
 
 .filter-input-checkbox:hover +label,
 .filter-input-radio:hover +label {
-  opacity: 1;
+  opacity: 0.4;
 }
 
 
@@ -830,8 +919,9 @@ body {
   border: none;
   color: var(--main-text-black);
   background-color: var(--secondary-bg-color);
-  padding: 15px 100px;
+  padding: 15px 88px;
   border-radius: 3px;
+  cursor: pointer;
 
 }
 
@@ -851,7 +941,6 @@ body {
 /* Sort */
 
 
-
 .sort-by p {
   font-size: 18px;
   line-height: 30px;
@@ -867,16 +956,16 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 55px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
 }
 
 .sort-list {
   display: flex;
   list-style-type: none;
-  padding-left: 25px;
 
 }
+
 
 
 .sort-by li {
@@ -924,9 +1013,25 @@ opacity: 0.3;
 
 }
 
+.catalog-item::before {
+ content: "";
+ display: block;
+ position: relative;
+ width: 360px;
+ height: 40px;
+ background-image: url("../img/catalog/browser.svg");
+ background-repeat: no-repeat;
+ opacity: 0.12 ;
+}
+
+.catalog-item:hover::before{
+  opacity: 1;
+}
+
 .item-name {
   font-size: 1.125em;
   text-transform: uppercase;
+  padding-top: 30px;
 
 }
 
@@ -937,6 +1042,8 @@ opacity: 0.3;
 
 .catalog-price p {
   color: var(--basic-dark);
+  margin-top: 25px;
+  margin-bottom: 30px;
 
 
 }
@@ -946,22 +1053,61 @@ opacity: 0.3;
 
 }
 
+.catalog-price {
+  background-color: var(--secondary-bg-color);
+  width: 360px;
+  height: 230px;
+  text-align: center;
+  /* padding-top: 25px;
+  padding-bottom: 25px; */
+}
+
+.price-button {
+  padding: 15px 85px;
+
+}
+
+
 /* Pagination */
 
 .pagination-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
 }
 
 .pagination-list a {
   text-decoration: none;
+  padding: 12px 20px;
   color: var(--main-text-black);
+  border-radius: 3px;
 }
 
 .pagination-item a {
+ display: block;
  background-color: var(--secondary-bg-color);
+ margin-right: 10px;
 
 }
+
+.pagination-item-button .button-second {
+  margin-left: 0px;
+  padding: 15px 90px;
+}
+
+
+
+.pagination-item-current a {
+  border: 3px solid var(--pagination-grey);
+  margin-right: 10px;
+
+ }
 
 .pagination-item a:hover {
   background-color: var(--button-2-hover);
@@ -974,9 +1120,5 @@ opacity: 0.3;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.pagination-item-current a {
- border: 3px solid;
- border-color:var(--pagination-grey);
 
-}
 
