@@ -109,12 +109,14 @@ body {
  align-content: start;
  column-gap: 140px;
 
+
 }
 
 /* Flex Catalog */
 
 .catalog-main {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom 25px;
@@ -149,6 +151,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 10px;
 }
 
 .nav-list {
@@ -162,13 +167,12 @@ body {
 
 .nav-list a {
   display: block;
-  padding: 82px 15px 20px;
+  margin-left: 45px;
 
 }
 
 .nav-bag a {
   display: block;
-  padding: 82px 15px 20px;
 
 }
 
@@ -176,7 +180,7 @@ body {
   text-decoration: none;
   color: var(--main-text-black) ;
   display: block;
-  /* padding: 82px 15px 20px; */
+  padding-bottom: 13px;
 
 }
 
@@ -197,10 +201,6 @@ body {
 
 }
 
-.header-logo {
-  padding: 49px 15px 20px;
-
-}
 
 .nav-bag .bag-link {
   position: relative;
@@ -212,7 +212,7 @@ body {
 .bag-link::before {
   content: "";
   position: absolute;
-  top: 84px;
+  top: 3px;
   left: 17px;
   width: 15px;
   height: 15px;
@@ -551,6 +551,7 @@ body {
 }
 
 /* Come back here */
+
 .work-example-item:not(:last-child)::after{
  content: "";
  width: 2px;
@@ -695,16 +696,18 @@ body {
 /* Catalog */
 
 .item-current {
-
-  border-bottom: 4px solid var(--button-main);
+  border-bottom: 3px solid var(--button-main);
 
 }
 
 .title-catalog {
-  font-size: 3.43em; /* 55px; */
-  line-height: 100%; /* 55px; */
+  font-size: 55px;
+  line-height: 55px;
   font-weight: 500;
   text-align: center;
+  padding-bottom: 110px;
+  padding-top: 75px;
+  margin: 0px;
 
 }
 
@@ -774,28 +777,50 @@ body {
 
 /* Sort */
 
-.sort-by {
-  margin: 0;
-  padding: 0;
 
-}
 
 .sort-by p {
   font-size: 1.25em; /* 18px; */
   line-height: 166%; /* 30px; */
   font-weight: 500;
   text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
 }
 
-.sort-by ul {
-  list-style: none;
-  font-size: 0,8em;
+.sort-by {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 50px;
+
+}
+
+.sort-list {
+  display: flex;
+  list-style-type: none;
+  padding-left: 25px;
+
+}
+
+
+.sort-by li {
+  font-size: 14px;
   text-transform: uppercase;
+  margin-top: 0px;
+  margin-left: 25px;
 
 }
+
+.sort-value a {
+  text-decoration: none;
+  color: var var(--main-text-black);
+}
+
 
 .sort-value {
-color: var var(--main-text-black);
 opacity: 0.3;
 
 }

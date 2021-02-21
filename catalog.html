@@ -13,8 +13,8 @@
 
 <body class="page-body catalog-page">
   <header class="main-header">
-    <nav class="navigation">
-      <div class="main-navigation-wrapper">
+    <div class="wrapper">
+     <nav class="navigation">
         <a class="header-logo" href="index.html">
           <img src="./img/nerds-logo.svg" width="159" height="65" alt="Логотип дизайн студии Нердс">
         </a>
@@ -24,9 +24,12 @@
           <li class="nav-item"> <a class="nav-link item-current" href="catalog.html">Магазин</a></li>
           <li class="nav-item"> <a class="nav-link" href="blank.html">Контакты</a></li>
         </ul>
-        <a class="nav-bag" href="blank.html">Корзина</a>
-      </div>
-    </nav>
+        <div class="nav-bag">
+          <a class="bag-link" href="blank.html">Корзина</a>
+        </div>
+     </nav>
+    </div>
+
     <h1 class="title-catalog">Магазин готовых шаблонов</h1>
   </header>
 
@@ -87,15 +90,15 @@
   <div class="sort-catalogue-wrapper">
      <section class="sort-by">
        <p>Сортировать:</p>
-       <ul>
+       <ul class="sort-list">
          <li class="sort-value price">
-           <a>по цене</a>
+           <a href="#">по цене</a>
          </li>
          <li class="sort-value type">
-           <a>по типу</a>
+           <a href="#">по типу</a>
          </li>
          <li class="sort-value name">
-           <a>по названию</a>
+           <a href="#">по названию</a>
          </li>
        </ul>
      </section>
