@@ -711,9 +711,13 @@ body {
 
 }
 
+.filters {
+ margin-top: 55px;
+
+}
 .filters p {
-  font-size: 1.25em; /* 18px; */
-  line-height: 166%; /* 30px; */
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
 
@@ -727,28 +731,95 @@ body {
 }
 
 .filters legend {
-  font-size: 1.25em; /* 18px; */
-  line-height: 166%; /* 30px; */
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
+
 
 }
 
 .filters ul {
   list-style: none;
   font-size: inherit;
-  color: var(--main-paragraph);
-
+  color: var(--main-text-black);
 }
 
 .filters fieldset {
   padding: 0;
-  margin: 0;
   border: none;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 
 }
 
+.filter-option {
+  padding-bottom: 15px;
+
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+.filter-input-checkbox + label::before {
+ content: "";
+ position: absolute;
+ top: 0px;
+ left: -40px;
+ width: 23px;
+ height: 23px;
+ border: 3px solid var(--catalog-hover);
+ border-radius: 4px;
+
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -34px;
+  width: 27px;
+  height: 100%;
+  background-image: url("../img/catalog/checked.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+
+.filter-input-checkbox:hover +label,
+.filter-input-radio:hover +label {
+  opacity: 1;
+}
+
+
+.filter-input-radio + label::before {
+ content: "";
+ position: absolute;
+ top: -3px;
+ left: -40px;
+ width: 17px;
+ height: 17px;
+ border: 4px solid var(--catalog-hover);
+ border-radius: 50%;
+
+
+}
+
+.filter-input-radio:checked + label::after {
+ content: "";
+ position: absolute;
+ top: 5px;
+ left: -32px;
+ width: 9px;
+ height: 9px;
+ background-color: var(--catalog-hover);
+ border-radius: 50%;
+
+}
 
 .button-second {
   font: inherit;
@@ -759,6 +830,8 @@ body {
   border: none;
   color: var(--main-text-black);
   background-color: var(--secondary-bg-color);
+  padding: 15px 100px;
+  border-radius: 3px;
 
 }
 
@@ -780,8 +853,8 @@ body {
 
 
 .sort-by p {
-  font-size: 1.25em; /* 18px; */
-  line-height: 166%; /* 30px; */
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
   margin-top: 0px;
@@ -830,9 +903,9 @@ opacity: 0.3;
 
 }
 
-.sort-value:active {
-  opacity: 1;
 
+.sort-current {
+  opacity: 1;
 }
 
 /* Catalog */
