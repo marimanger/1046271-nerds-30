@@ -56,7 +56,6 @@
 
 --button-2-hover: #DFDFDF;
 --button-2-active: #D5D5D5;
-
 --catalog-hover: #4D4D4D;
 
 --pagination-grey: #DBDBDB;
@@ -65,9 +64,12 @@
 
 --filter-range-bar: #D7DCDF;
 --filter-range-controls: #ABABAB;
-
 --shadow: #CFCFCF;
 
+/* Modal */
+
+--modal-text: #444444;
+--modal-border: #D7DCDE;
 
 }
 
@@ -559,6 +561,9 @@ body {
 }
 
 /* Come back here */
+.work-example-item {
+  position: relative;
+}
 
 .work-example-item:not(:last-child)::after{
  content: "";
@@ -566,9 +571,11 @@ body {
  height: 50px;
  background-color: var(--secondary-bg-color);
  display: block;
- position: relative;
+ position: absolute;
  left: 250px;
- margin-top: -60px;
+ top: 50%;
+ margin-top: -25px;
+
 
 }
 
@@ -700,6 +707,42 @@ body {
 
 }
 
+/* Modal */
+
+.modal {
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+
+}
+
+.modal-feedback h2 {
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: 700;
+  color: var(--main-text-black)
+
+}
+
+.feedback-form label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--main-text-black);
+  display: block;
+  margin-bottom: 9px;
+
+
+}
+
+.feedback-form input[type="text"] {
+  font: inherit;
+  color: var(--modal-text);
+  border: 2px solid var(--modal-border);
+  border-radius: 3px;
+
+
+}
+
 /* Catalog */
 
 .item-current {
@@ -709,7 +752,7 @@ body {
 
 .title-catalog {
   font-size: 55px;
-  line-height: 55px;
+  line-height: 53px;
   font-weight: 500;
   text-align: center;
   padding-bottom: 110px;
