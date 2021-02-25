@@ -173,7 +173,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-right: 80px;
+  padding-right: 75px;
 
 }
 
@@ -194,7 +194,7 @@ body {
 
 .nav-bag .bag-link {
   position: relative;
-  padding-left: 50px;
+  padding-left: 60px;
 
   /* outline: 5px solid #ff0000; */
 }
