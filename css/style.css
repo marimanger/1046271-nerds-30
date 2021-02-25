@@ -70,6 +70,7 @@
 
 --modal-text: #444444;
 --modal-border: #D7DCDE;
+--modal-border-hover: #B4B9BB;
 
 }
 
@@ -159,11 +160,11 @@ body {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 72px;
-  padding-bottom: 10px;
+  padding-top: 53px;
 }
 
 .nav-list {
@@ -236,11 +237,13 @@ body {
 
 .slider {
   background-color: var(--secondary-bg-color);
+  position: relative;
 
 }
 
 .slide {
  padding: 20px 800px 100px 0px;
+ display: none;
 
 }
 
@@ -268,6 +271,10 @@ body {
 
 }
 
+.slide-current {
+  display: block;
+}
+
 .slider h2{
   font-size: 55px;
   line-height: 55px;
@@ -290,6 +297,7 @@ body {
 }
 
 .button {
+  display: inline-block;
   font: inherit;
   padding: 15px 50px;
   text-align: center;
@@ -313,7 +321,40 @@ body {
   background-color: var(--button-active);
 }
 
+.slider-controls {
+  position: absolute;
+  width: 88px;
+  top: 326px;
+  left:561px;
+  display: flex;
+  justify-content: space-between;
 
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+
+}
+
+.current::after{
+ content: "";
+ position: absolute;
+ width: 8px;
+ height: 8px;
+ background-color: transparent;
+ border: 2px solid red;
+ border-radius: 50%;
+ top: 3px;
+ left: 3px;
+
+
+}
 
 /* Services */
 
@@ -606,11 +647,21 @@ body {
   background-color: var(--secondary-bg-color);
   margin-left: calc((1180px - 100vw) /2);
   margin-right: calc((1180px - 100vw) /2);
+  height: 416px;
+  position: relative;
 
 }
 
 .contact-info {
  margin-left: calc(50vw - 590px);
+ background-color: var(--main-bg-color);
+ height: auto;
+ position: absolute;
+ top: 50px;
+ bottom: 50px;
+ padding: 38px 52px;
+
+
 
 }
 
@@ -626,7 +677,7 @@ body {
 }
 
 .contact-info h3 {
-  font-size: inherit;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   background-color: var(--main-bg-colors);
@@ -640,11 +691,7 @@ body {
 
 }
 
-.contact-info
-.button {
- width: 220px;
 
-}
 
 .social-wrapper {
   display: grid;
@@ -668,6 +715,13 @@ body {
 
 .friends-offer p {
   color: var(--main-paragraph);
+  margin-top: 10px;
+
+}
+
+.friends-offer {
+  padding-top: 12px;
+  padding-left: 18px;
 
 }
 
@@ -678,7 +732,8 @@ body {
   align-content: center;
   justify-content: space-between;
   width: 260px;
-  padding-left: 0px;
+  padding-left: 15px;
+  margin: 0px;
 
 }
 
@@ -712,15 +767,26 @@ body {
 .modal {
   background-color: var(--main-bg-color);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-
+  top: 185px;
+  bottom: auto;
+  width: 760px;
+  padding: 30px 95px;
+  position: fixed;
+  margin: auto;
+  right: 0px;
+  left:0px;
 }
 
-.modal-feedback h2 {
+
+
+.modal h2 {
   font-size: 45px;
   line-height: 55px;
   font-weight: 700;
   color: var(--main-text-black)
-
+  margin: 0px;
+  margin-top: 30px;
+  margin-bottom: 24px;
 }
 
 .feedback-form label {
@@ -728,21 +794,99 @@ body {
   line-height: 18px;
   font-weight: 700;
   color: var(--main-text-black);
+  margin-top: 13px;
+  margin-bottom: 10px;
   display: block;
-  margin-bottom: 9px;
+
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
 
 }
 
-.feedback-form input[type="text"] {
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
   font: inherit;
   color: var(--modal-text);
+  opacity: 0.5;
   border: 2px solid var(--modal-border);
   border-radius: 3px;
-
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 183px;
 
 }
 
+.feedback-form input:hover {
+  border-color: var(--modal-border-hover);
+
+}
+
+
+
+.user-feedback {
+  display: block;
+  width: 760px;
+  padding: 15px 10px 70px 10px;
+  box-sizing: border-box;
+  font: inherit;
+  color: var(--modal-text);
+  opacity: 0.5;
+  border: 2px solid var(--modal-border);
+  border-radius: 3px;
+  resize: none;
+
+}
+
+.text-area :hover {
+  border-color: var(--modal-border-hover);
+
+}
+
+.user-feedback textarea {
+  padding: 12px 20px;
+
+}
+
+.button-send .button {
+  width: 260px;
+  margin-top: 48px;
+  cursor: pointer;
+
+}
+
+.modal-close {
+  text-decoration: none;
+  position: absolute;
+  top: 77px;
+  left: 830px;
+  border: 0;
+  cursor: pointer;
+  background-image: url("../img/close-cross-button.svg");
+  width: 21px;
+  height: 21px;
+  opacity: 0.3;
+  background-color: transparent;
+
+}
+
+.modal-close:hover {
+  opacity: 1;
+
+}
+
+.modal-close:active {
+  opacity: 0.1;
+
+}
+
+
+}
 /* Catalog */
 
 .item-current {

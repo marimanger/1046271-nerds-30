@@ -29,21 +29,27 @@
        </div>
      </nav>
      <section class="slider">
-      <article class="slide slide-1">
+      <article class="slide slide-1 slide-current ">
         <h2>Долго, дорого, скрупулезно</h2>
-        <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+        <p>Математически выверенный&nbsp;дизайн для&nbsp;вашего&nbsp;сайта или мобильного приложения.</p>
         <a  class="button" href="blank.html">Узнать больше</a>
       </article>
-      <!-- <article class="slide slider-2">
-        <h2>Любим математику&nbsp;как никто другой</h2>
+      <article class="slide slide-2">
+        <h2>Любим&nbsp;математику как&nbsp;никто&nbsp;другой</h2>
         <p>Никакого креатива, только математические формулы&nbsp;для расчета идеальных пропорций.</p>
         <a class="button" href="blank.html">Узнать больше</a>
       </article>
-      <article class="slide slider-3">
-        <h2>Только ночь,&nbsp;только хардкор</h2>
+      <article class="slide slide-3 ">
+        <h2>Только ночь,только&nbsp;хардкор</h2>
         <p>Никакого креатива, только математические формулы&nbsp;для расчета идеальных пропорций.</p>
-        <a class="button" href="blank.html">Узнать больше</a> -->
+        <a class="button" href="blank.html">Узнать больше</a>
       </article>
+      <div class="slider-controls">
+        <button  type="button" aria-label="Первый слайд"></button>
+        <button class="current" type="button" aria-label="Второй слайд"></button>
+        <button type="button" aria-label="Третий слайд"></button>
+
+      </div>
     </section>
    </div>
   </header>
@@ -161,19 +167,29 @@
      </section>
     </div>
   </footer>
-  <section class="modal modal-feedback">
+  <!-- <section class="modal modal-feedback">
     <h2>Напишите нам</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <label for="name">Ваше имя:</label>
-      <input class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" id="name">
-      <label for="email">Ваш email:</label>
-      <input class="user-email" type="text" name="user-email" placeholder="email@example.com" id="email">
-      <label for="email">Текст письма:</label>
-      <input class="user-feedback"" type="text" name="user-feedback" placeholder="В свободной форме" id="email">
-      <button class="button" type="submit">Отправить</button>
-    </form>
-
-  </section>
+      <div class="feedback-item">
+       <label for="name">Ваше имя:</label>
+       <input class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" id="name" required>
+      </div>
+     <div class="feedback-item">
+       <label for="email">Ваш email:</label>
+       <input class="user-email" type="email" name="user-email" placeholder="email@example.com" id="email" required>
+     </div>
+      <div class="feedback-text">
+       <label for="user-feedback">Текст письма:</label>
+       <textarea class="user-feedback" name="user-feedback" id="user-feedback" >В свободной форме</textarea>
+      </div>
+       <div class="button-send">
+       <button class="button" type="submit">Отправить</button>
+      </div>
+      </form>
+       <button class="modal-close" type="button">
+         <span class="visually-hidden">Закрыть</span>
+       </button>
+  </section> -->
 </body>
 
 </html>
