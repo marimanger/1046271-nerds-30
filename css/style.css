@@ -180,6 +180,8 @@ body {
 .nav-list a {
   display: block;
   margin-left: 45px;
+  padding-bottom: 15px;
+  padding-top: 16px;
 
 }
 .nav-bag {
@@ -897,10 +899,9 @@ body {
 }
 
 
-}
 /* Catalog */
 
-.item-current {
+.nav-list .item-current {
   border-bottom: 3px solid var(--button-main);
 
 }
@@ -1151,6 +1152,7 @@ body {
 
 .sort-by {
   display:flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 55px;
@@ -1160,13 +1162,16 @@ body {
 
 .sort-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  margin-left: 160px;
 
 }
 
 
 
 .sort-by li {
+  position: relative;
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 0px;
@@ -1195,14 +1200,48 @@ opacity: 0.3;
   opacity: 1;
 }
 
+.sort-down {
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  background-image: url("../img//catalog/sort-button.svg");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 10px;
+  background-color: transparent;
+
+
+}
+.sort-up {
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  background-image: url("../img//catalog/sort-button.svg");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 10px;
+  background-color: transparent;
+  transform: rotate(180deg);
+
+}
+.sort-buttons {
+  display: flex;
+  flex-wrap: wrap-reverse;
+
+}
+
+.sort-buttons :not(:last-child)  {
+  margin-right: 15px;
+
+}
 /* Catalog */
 
 .catalog-item {
+  position: relative;
   width: 360px;
   min-height: 620px;
   margin-right: 25px;
   margin-bottom: 30px;
-
 
 }
 
@@ -1254,10 +1293,10 @@ opacity: 0.3;
 .catalog-price {
   background-color: var(--secondary-bg-color);
   width: 360px;
-  height: 230px;
+  height: 270px;
   text-align: center;
-  /* padding-top: 25px;
-  padding-bottom: 25px; */
+  position: absolute;
+  bottom: 0;
 }
 
 .price-button {
