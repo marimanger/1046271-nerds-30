@@ -263,7 +263,7 @@ body {
 }
 
 .slide {
- padding: 20px 775px 75px 0px;
+ padding: 20px 750px 75px 0px;
  display: none;
 
 }
@@ -334,8 +334,8 @@ body {
 .slider-controls {
   position: absolute;
   width: 88px;
-  top: 326px;
-  left:561px;
+  top: 305px;
+  left:536px;
   display: flex;
   justify-content: space-between;
 
@@ -678,8 +678,8 @@ body {
 }
 
 .phone-number {
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding-top: 7px;
+  padding-bottom: 19px;
 }
 
 .contact-info h3 {
