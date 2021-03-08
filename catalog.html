@@ -44,13 +44,13 @@
                 <div class="bar" style=" width: 30%; margin-left: 20%;" ></div>
               </div>
               <div class="toggle toggle-min" tabindex="0" style="left: 20%;"></div>
-              <div class="toggle toggle-max" tabindex="0"style="left: 50%;"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 50%;"></div>
             </div>
             <div class="price-controls">
-              <label for="from-range">
+              <label for="min-range">
                от <input type="number" id="min-range" value="0">
               </label>
-              <label for="to-range">
+              <label for="max-range">
                до <input type="number" id="max-range" value="15000">
                </label>
             </div>
@@ -60,15 +60,15 @@
           <legend class="filter-radio">Сетка:</legend>
           <ul class="filter-radio-list">
             <li class="filter-option filter-radio">
-              <input class=" visually-hidden filter-input-radio" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked>
+              <input class=" visually-hidden filter-input-radio filter-input" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked>
               <label for="filter-adaptive">Адаптивная</label>
             </li>
             <li class="filter-option filter-radio">
-              <input class=" visually-hidden filter-input-radio" type="radio" name="grid" value="fixed" id="filter-fixed">
+              <input class=" visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="fixed" id="filter-fixed">
               <label for="filter-fixed">Фиксированная</label>
             </li>
             <li class="filter-option filter-radio">
-              <input class=" visually-hidden filter-input-radio" type="radio" name="grid" value="flexible" id="filter-flexible">
+              <input class=" visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="flexible" id="filter-flexible">
               <label for="filter-flexible">Резиновая</label>
             </li>
           </ul>
@@ -77,23 +77,23 @@
           <legend>Особенности:</legend>
           <ul>
             <li class="filter-option filter-checkbox">
-              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
               <label for="filter-slider">Слайдер</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantage" id="filter-advantage">
+              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantage" id="filter-advantage">
               <label for="filter-advantage">Блок преимуществ</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
               <label for="filter-news">Новости</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantage" id="filter-gallery">
+              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="advantage" id="filter-gallery">
               <label for="filter-gallery">Галерея</label>
             </li>
             <li class="filter-option filter-checkbox">
-              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="bag" id="filter-bag">
+              <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bag" id="filter-bag">
               <label for="filter-bag">Корзина</label>
             </li>
           </ul>
@@ -128,49 +128,61 @@
       <article class="catalog-item">
         <img src=".//img/catalog/sedona.jpg" width="360" height="578" alt="Седона">
         <div class="catalog-price">
-          <h3 class="item-name">Sedona</h3>
+          <a class="item-product-link" href="#">
+            <h3 class="item-name">Sedona</h3>
+          </a>
           <p>Информационный сайт<br>для туристов</p>
-          <a class="button price-button" href="#">9900₽</a>
+          <a class="button price-button" type="button" aria-label="Добавить информационный сайт Седона в корзину" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/pink.jpg" width="360" height="578" alt="Пинк">
         <div class="catalog-price">
-          <h3 class="item-name">Pink</h3>
+          <a class="item-product-link" href="#">
+            <h3 class="item-name">Pink</h3>
+          </a>
           <p>Продуктовый лендинг<br>приложения для iOS и Android</p>
-          <a class="button price-button" href="#">9900₽</a>
+          <a class="button price-button" type="button" aria-label="Добавить сайт Пинк корзину" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/barbershop.jpg" width="360" height="578" alt="Барбершоп">
         <div class="catalog-price">
-          <h3 class="item-name">Barbershop</h3>
+          <a class="item-product-link" href="#">
+            <h3 class="item-name">Barbershop</h3>
+          </a>
           <p>Сайт салона красоты.<br>Для мужчин, да.</p>
-          <a class="button price-button" href="#">9900₽</a>
+          <a class="button price-button" type="button" aria-label="Добавить сайт Барбершоп в корзину" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/mishka.jpg" width="360" height="578" alt="Мишка">
         <div class="catalog-price">
-          <h3 class="item-name">Mishka</h3>
+          <a class="item-product-link" href="#">
+            <h3 class="item-name">Mishka</h3>
+          </a>
           <p>Интернет-магазин<br>вязаных игрушек</p>
-          <a class="button price-button" href="#">9900₽</a>
+          <a class="button price-button" type="button" aria-label="Добавить Интернет-магазин Мишка в корзину" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/a-plus.jpg" width="360" height="578" alt="А Плюс">
         <div class="catalog-price">
-          <h3 class="item-name">A Plus</h3>
+          <a class="item-product-link" href="#">
+            <h3 class="item-name">A Plus</h3>
+          </a>
           <p>Лендинг курсов повышени<br>квалификации</p>
-          <a class="button price-button" href="#">9900₽</a>
+          <a class="button price-button" type="button" aria-label="Добавить сайт А-плюс в корзину" href="#">9900₽</a>
         </div>
       </article>
       <article class="catalog-item">
         <img src=".//img/catalog/kvast.jpg" width="360" height="578" alt="Кваст">
         <div class="catalog-price">
-          <h3 class="item-name">Кваст</h3>
+          <a class="item-product-link" href="#">
+            <h3 class="item-name">Кваст</h3>
+          </a>
           <p>Промо-сайт производителя<br>крафтового кваса</p>
-          <a class="button price-button" href="#">9900₽</a>
+          <a class="button price-button" type="button" aria-label="Добавить промо сайт Кваст в корзину" href="#">9900₽</a>
         </div>
       </article>
      </section>
@@ -194,8 +206,7 @@
   </main>
   <footer class="main-footer">
     <div class="map">
-      <!-- тут будет карта -->
-
+      <img class="map-image" src="./img/Map.jpg" width="1440" height="416" alt="Изображение карты как проехать">
     <section class="contact-info">
       <h3>Nerds Design Studio</h3>
       <p class="address"> 191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
