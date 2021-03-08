@@ -774,6 +774,7 @@ body {
   margin: auto;
   right: 0px;
   left:0px;
+  display: none;
 }
 
 
@@ -782,7 +783,7 @@ body {
   font-size: 45px;
   line-height: 55px;
   font-weight: 700;
-  color: var(--main-text-black)
+  color: var(--main-text-black);
   margin: 0px;
   margin-top: 30px;
   margin-bottom: 24px;
@@ -804,7 +805,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 
-
 }
 
 .feedback-form input[type="text"],
@@ -812,7 +812,7 @@ body {
   font: inherit;
   color: var(--modal-text);
   opacity: 0.5;
-  border: 2px solid var(--modal-border);
+  border: 3px solid var(--modal-border);
   border-radius: 3px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -822,10 +822,35 @@ body {
 }
 
 .feedback-form input:hover {
-  border-color: var(--modal-border-hover);
+  border: 3px solid var(--modal-border-hover);
+
 
 }
 
+.feedback-form input:focus {
+  border-color: var(--main-text-black);
+  color: var(--main-text-black);
+  opacity: 1;
+
+}
+
+.feedback-form input:invalid {
+  border-color: var(--button-hover);
+  color: var(--button-hover);
+  opacity: 1;
+
+}
+
+.user-feedback:hover {
+  border-color: var(--modal-border-hover);
+}
+
+.user-feedback:focus {
+  color: var(--main-text-black);
+  border-color: var(--main-text-black);
+  opacity: 1;
+
+}
 
 
 .user-feedback {
@@ -836,16 +861,12 @@ body {
   font: inherit;
   color: var(--modal-text);
   opacity: 0.5;
-  border: 2px solid var(--modal-border);
+  border: 3px solid var(--modal-border);
   border-radius: 3px;
   resize: none;
 
 }
 
-.text-area :hover {
-  border-color: var(--modal-border-hover);
-
-}
 
 .user-feedback textarea {
   padding: 12px 20px;
@@ -1074,11 +1095,12 @@ body {
 
 }
 
-/* .filter-input-checkbox:hover +label,
+
+.filter-input-checkbox:hover +label,
 .filter-input-radio:hover +label {
-  opacity: 0.1;
-  color: red;
-} */
+  opacity: 1;
+}
+
 
 
 
@@ -1249,6 +1271,7 @@ opacity: 0.3;
   min-height: 620px;
   margin-right: 25px;
   margin-bottom: 25px;
+  transition: box-shadow .3s
 
 }
 
@@ -1268,8 +1291,18 @@ opacity: 0.3;
  opacity: 0.12 ;
 }
 
+.catalog-item:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
 .catalog-item:hover::before{
   opacity: 1;
+
+}
+
+.item-product-link{
+  text-decoration: none;
+  color: var(--main-text-black);
 }
 
 .item-name {
@@ -1279,7 +1312,8 @@ opacity: 0.3;
 
 }
 
-.item-name:hover {
+.item-name:hover,
+.item-name:focus {
   color: var(--button-hover);
 
 }
@@ -1302,8 +1336,16 @@ opacity: 0.3;
   height: 249px;
   text-align: center;
   position: absolute;
-  bottom: 6px;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s;
 
+}
+
+
+.catalog-item:hover .catalog-price {
+  opacity: 1;
+  box-shadow: (0px 6px 15px rgba(0, 0, 0, 0.25));
 }
 
 .price-button {
