@@ -766,7 +766,7 @@ body {
 .modal {
   background-color: var(--main-bg-color);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-  top: 185px;
+  top: 280px;
   bottom: auto;
   width: 760px;
   padding: 30px 95px;
@@ -774,7 +774,7 @@ body {
   margin: auto;
   right: 0px;
   left:0px;
-  display: none;
+  /* display: none; */
 }
 
 
@@ -834,7 +834,7 @@ body {
 
 }
 
-.feedback-form input:invalid {
+.feedback-form input:invalid:not(:placeholder-shown) {
   border-color: var(--button-hover);
   color: var(--button-hover);
   opacity: 1;
@@ -973,7 +973,6 @@ body {
 
 }
 
-
 .filter-option {
   padding-bottom: 15px;
 
@@ -1095,14 +1094,10 @@ body {
 
 }
 
-
 .filter-input-checkbox:hover +label,
 .filter-input-radio:hover +label {
   opacity: 1;
 }
-
-
-
 
 .filter-input-radio + label::before {
  content: "";
@@ -1116,9 +1111,6 @@ body {
  opacity: 0.4;
 
 }
-
-
-
 
 .filter-input-radio:checked + label::after {
  content: "";
@@ -1148,13 +1140,10 @@ body {
 
 }
 
-
-
 .button-second:hover {
   background-color: var(--button-2-hover);
 
 }
-
 
 .button-second:active {
   background-color: var(--button-2-active);
@@ -1194,8 +1183,6 @@ body {
 
 }
 
-
-
 .sort-by li {
   position: relative;
   font-size: 14px;
@@ -1210,7 +1197,6 @@ body {
   color: var var(--main-text-black);
 }
 
-
 .sort-value {
 opacity: 0.3;
 
@@ -1220,7 +1206,6 @@ opacity: 0.3;
   opacity: 0.6;
 
 }
-
 
 .sort-current {
   opacity: 1;
@@ -1235,7 +1220,6 @@ opacity: 0.3;
   width: 11px;
   height: 10px;
   background-color: transparent;
-
 
 }
 
@@ -1265,6 +1249,8 @@ opacity: 0.3;
 
 /* Catalog */
 
+
+
 .catalog-item {
   position: relative;
   width: 360px;
@@ -1289,13 +1275,17 @@ opacity: 0.3;
  background-image: url("../img/catalog/browser.svg");
  background-repeat: no-repeat;
  opacity: 0.12 ;
+
 }
 
-.catalog-item:hover {
+
+.catalog-item:hover,
+.catalog-item:focus {
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-.catalog-item:hover::before{
+.catalog-item:hover::before,
+.catalog-item:focus-within::before{
   opacity: 1;
 
 }
@@ -1343,7 +1333,8 @@ opacity: 0.3;
 }
 
 
-.catalog-item:hover .catalog-price {
+.catalog-item:hover .catalog-price,
+.catalog-item:focus-within .catalog-price  {
   opacity: 1;
   box-shadow: (0px 6px 15px rgba(0, 0, 0, 0.25));
 }
@@ -1393,7 +1384,8 @@ opacity: 0.3;
 
  }
 
-.pagination-item a:hover {
+.pagination-item a:hover,
+.pagination-item a:focus {
   background-color: var(--button-2-hover);
 
 }
