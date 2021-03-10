@@ -1073,20 +1073,6 @@ body {
 
 }
 
-/* checkbox */
-
-/* .filter-input-checkbox + label::before {
- content: "";
- position: absolute;
- top: 0px;
- left: -43px;
- width: 20px;
- height: 20px;
- border: 3px solid var(--catalog-hover);
- border-radius: 4px;
- opacity: 0.4;
-
-} */
 
 .filter-input-checkbox + label::before {
   content: "";
@@ -1122,6 +1108,12 @@ body {
   opacity: 1;
 }
 
+.filter-input-checkbox:disabled + label:before,
+.filter-input-checkbox:disabled + label:before {
+  opacity: 0.1;
+}
+
+
 .filter-input-radio + label::before {
  content: "";
  position: absolute;
@@ -1154,6 +1146,18 @@ body {
 
 }
 
+
+.filter-input-radio:disabled + label:before,
+.filter-input-radio:disabled + label:after {
+  opacity: 0.1;
+
+}
+
+.filter-input-radio:focus + label,
+.filter-input-checkbox:focus + label {
+  outline: auto;
+
+}
 
 .button-second {
   font: inherit;
@@ -1287,7 +1291,8 @@ opacity: 0.3;
   min-height: 620px;
   margin-right: 25px;
   margin-bottom: 25px;
-  transition: box-shadow .3s
+  transition: box-shadow .3s;
+  overflow: auto;
 
 }
 
@@ -1310,7 +1315,7 @@ opacity: 0.3;
 
 
 .catalog-item:hover,
-.catalog-item:focus {
+.catalog-item:focus-within {
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
 }
 
@@ -1333,8 +1338,15 @@ opacity: 0.3;
 }
 
 .item-name:hover,
-.item-name:focus {
+.item-name:focus-within {
   color: var(--button-hover);
+
+}
+
+.item-name:active {
+  color: var(--main-text-black);
+  opacity: 0.3;
+
 
 }
 
@@ -1349,6 +1361,7 @@ opacity: 0.3;
   background-color: var(--button-active);
 
 }
+
 
 .catalog-price {
   background-color: var(--secondary-bg-color);
@@ -1365,7 +1378,7 @@ opacity: 0.3;
 
 
 .catalog-item:hover .catalog-price,
-.catalog-item:focus .catalog-price  {
+.catalog-item:focus-within .catalog-price  {
   opacity: 1;
   box-shadow: (0px 6px 15px rgba(0, 0, 0, 0.25));
 }
