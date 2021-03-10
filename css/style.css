@@ -641,8 +641,6 @@ body {
 
 .map {
   background-color: var(--secondary-bg-color);
-  margin-left: calc((1160px - 100vw) /2);
-  margin-right: calc((1160px - 100vw) /2);
   height: 416px;
   position: relative;
   margin-top: 45px;
@@ -657,15 +655,18 @@ body {
 
 }
 
+.contact-container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 .contact-info {
- margin-left: calc((50vw - 590px) /2);
  background-color: var(--main-bg-color);
- height: auto;
- position: absolute;
- top: 58px;
- bottom: 50px;
- left:10px;
+ margin-top: -365px;
+ z-index: 2;
+ position: relative;
+ width: 210px;
  padding: 35px 55px;
 
 }
