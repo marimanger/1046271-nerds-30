@@ -664,7 +664,7 @@ body {
 .contact-info {
  background-color: var(--main-bg-color);
  margin-top: -365px;
- z-index: 2;
+ z-index: 0;
  position: relative;
  width: 210px;
  padding: 35px 55px;
@@ -776,7 +776,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 760px;
-  padding: 30px 95px;
+  padding: 30px 100px 90px;
   position: fixed;
   margin: auto;
   overflow: scroll;
@@ -785,6 +785,10 @@ body {
 
 }
 
+.modal-appear {
+  display: block;
+
+}
 
 
 .modal h2 {
@@ -892,7 +896,7 @@ body {
   text-decoration: none;
   position: absolute;
   top: 77px;
-  left: 830px;
+  left: 850px;
   border: 0;
   cursor: pointer;
   background-image: url("../img/close-cross-button.svg");
@@ -1289,7 +1293,6 @@ opacity: 0.3;
   position: relative;
   width: 360px;
   min-height: 620px;
-  margin-right: 25px;
   margin-bottom: 25px;
   transition: box-shadow .3s;
   overflow: auto;
