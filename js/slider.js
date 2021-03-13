@@ -14,8 +14,6 @@ function showSlides(n) {
   let p = 0;
   let slides = document.getElementsByClassName("slide");
   let dots = document.getElementsByClassName("dot-button");
-  console.info(`lenght of slides ${slides.length}`);
-  console.info(`buttons of slides ${dots.length}`);
 
   if (n > slides.length){
     slideIndex = 1
