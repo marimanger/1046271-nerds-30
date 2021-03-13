@@ -664,7 +664,7 @@ body {
 .contact-info {
  background-color: var(--main-bg-color);
  margin-top: -365px;
- z-index: 0;
+ z-index: 2;
  position: relative;
  width: 210px;
  padding: 35px 55px;
@@ -782,6 +782,7 @@ body {
   overflow: scroll;
   max-height: 90vh;
   transition: 0.5s transform;
+  z-index:3;
 
 }
 
