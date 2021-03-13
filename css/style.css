@@ -648,6 +648,13 @@ body {
 
 }
 
+.container-map-image {
+  position: absolute;
+  width: 100%;
+
+}
+
+
 .map-image {
   width: 100%;
   max-height: 416px;
@@ -663,9 +670,9 @@ body {
 
 .contact-info {
  background-color: var(--main-bg-color);
- margin-top: -365px;
+ margin-top: 50px;
  z-index: 2;
- position: relative;
+ position: absolute;
  width: 210px;
  padding: 35px 55px;
 

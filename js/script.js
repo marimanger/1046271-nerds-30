@@ -50,18 +50,18 @@ function init() {
   siteMap.behaviors.disable("scrollZoom");
 
 
+// Creating a placemark.
+  sitePlacemark = new ymaps.Placemark(siteMap.getCenter(), {
+    hintContent: "NЁRDS DESIGN STUDIO, 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
+  }, {
+    iconImageSize: [230, 200],
+    iconImageOffset: [115, -130],
+    iconLayout: "default#image",
+    iconImageHref: "img/map-marker.svg"
 
-    myPlacemark = new ymaps.Placemark(siteMap.getCenter(), {
-      hintContent: "NЁRDS DESIGN STUDIO, 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
-    }, {
-      iconLayout: "default#image",
-      iconImageHref: "img/map-marker.svg",
-      iconImageSize: [231, 190],
-      iconImageOffset: [110, -125]
-    });
+  });
 
-
-  siteMap.geoObjects.add(myPlacemark);
+  siteMap.geoObjects.add(sitePlacemark);
 
 }
 
