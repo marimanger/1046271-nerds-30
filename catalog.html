@@ -8,7 +8,10 @@
   <link rel="apple-touch-icon" href="./img/favicon/avicon/favicon-apple.png"><!-- 180×180 -->
   <link href="./css/normalize.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
-  <title>Нёрдс</title>
+  <title>Нёрдс Магазин</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=23a546b3-b588-4e34-b2a7-1017ad34c8c3&lang=ru_RU"
+  type="text/javascript"></script>
+
 </head>
 
 <body class="page-body catalog-page">
@@ -216,8 +219,10 @@
       </section>
     </div>
   </main>
-  <div class="map">
-    <img class="map-image" src="./img/Map.jpg" width="1440" height="416" alt="Изображение карты как проехать">
+  <div id="map" class="map">
+    <div class="container-map-image">
+      <img class="map-image" src="./img/Map.jpg" width="1440" height="416" alt="Изображение карты как проехать">
+    </div>
     <div class="contact-container">
       <section class="contact-info">
         <h3>Nerds Design Studio</h3>
