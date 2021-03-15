@@ -25,14 +25,14 @@ btn.addEventListener("click", function (evt) {
   popup.classList.add("modal-appear");
   if (usernameFromStorage) {
     if (usernameFromStorage) {
-    username.value = usernameFromStorage;
-    email.focus();
+     username.value = usernameFromStorage;
+     email.focus();
     } else {
-    email.value = emailFromStorage;
-    message.focus();
+     email.value = emailFromStorage;
+     message.focus();
     }
     } else {
-    username.focus();
+     username.focus();
     }
 
 });

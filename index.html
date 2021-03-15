@@ -7,7 +7,7 @@
   <link rel="icon" href="./img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicon/avicon/favicon-apple.png"><!-- 180×180 -->
   <link href="./css/normalize.min.css" rel="stylesheet">
-  <link href="./css/style.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
   <title>Нёрдс Главная</title>
 </head>
 
@@ -25,24 +25,24 @@
           <li class="nav-item"> <a class="nav-link" href="blank.html">Контакты</a></li>
         </ul>
         <div class="nav-bag">
-          <a class="bag-link" href="blank.html">Корзина</a>
+          <a class="bag-link" href="blank.html" aria-label="Открыть корзину">Корзина</a>
         </div>
       </nav>
       <section class="slider">
         <article class="slide slide-1 ">
           <h2>Долго, дорого, скрупулезно.</h2>
           <p>Математически выверенный&nbsp;дизайн для&nbsp;вашего&nbsp;сайта или мобильного приложения.</p>
-          <a class="button slide-button" href="blank.html">Узнать больше</a>
+          <a class="button slide-button" href="blank.html" aria-label="Узнать больше о студии Нердс">Узнать больше</a>
         </article>
         <article class="slide slide-2 ">
           <h2>Любим&nbsp;математику как&nbsp;никто&nbsp;другой</h2>
           <p>Никакого креатива, только математические формулы&nbsp;для расчета идеальных пропорций.</p>
-          <a class="button button slide-button" href="blank.html">Узнать больше</a>
+          <a class="button button slide-button" href="blank.html" aria-label="Узнать больше о студии Нердс">Узнать больше</a>
         </article>
         <article class="slide slide-3 slide-current">
           <h2>Только ночь,<br>только хардкор</h2>
           <p>Работать днем, как все? Мы против&nbsp;этого. Ближе&nbsp;к&nbsp;полуночи работа только начинается.</p>
-          <a class="button button slide-button" href="blank.html">Узнать больше</a>
+          <a class="button button slide-button" href="blank.html" aria-label="Узнать больше о студии Нердс">Узнать больше</a>
         </article>
         <div class="slider-controls">
           <button  class="dot-button" aria-label="Первый слайд" onclick="currentSlide(1)" ></button>
@@ -60,17 +60,17 @@
         <article class="service-item services-sites">
           <h3> Веб-сайты</h3>
           <p>Мир никогда не будет прежним после&nbsp;того как увидит ваш сайт!</p>
-          <a class="button" href="blank.html">Заказать</a>
+          <a class="button" href="blank.html" aria-label="Заказать Веб сайт">Заказать</a>
         </article>
         <article class="service-item services-apps">
           <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore&nbsp;и Google Play</p>
-          <a class="button apps-green" href="blank.html">Заказать</a>
+          <a class="button apps-green" href="blank.html" aria-label="Заказать приложение">Заказать</a>
         </article>
         <article class="service-item services-presentations">
           <h3>Презентации</h3>
           <p>Вы даже не&nbsp;подозреваете, насколько&nbsp;вы изумительны!</p>
-          <a class="button presentation-yellow" href="blank.html">Заказать</a>
+          <a class="button presentation-yellow" href="blank.html" aria-label="Заказать презентацию">Заказать</a>
         </article>
       </div>
     </section>
@@ -102,18 +102,21 @@
     </div>
     <section class="work-example">
       <h2 class="visually-hidden">Примеры сайтов</h2>
-      <a class="work-example-item academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="./img/html-academy-logo.svg" width="199" height="67" alt="Ссылка на Пример сайта HTML Академия">
+      <a class="work-example-item academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на Пример сайта HTML Академия">
+        <img src="./img/html-academy-logo.svg" width="199" height="67"
+          alt=" Логотип HTML академии">
       </a>
-      <a class="work-example-item barbershop-logo" href="blank.html">
+      <a class="work-example-item barbershop-logo" href="blank.html" aria-label="Ссылка на Пример сайта Барбер шоп Бородинский">
         <img src="./img/barbershop-logo.png" width="209" height="90"
-          alt="Ссылка на Пример сайта Барбер шоп Бородинский">
+          alt=" Логотип Барбер шопа Бородинский">
       </a>
-      <a class="work-example-item pink-logo" href="blank.html">
-        <img src="./img/pink-logo.png" width="185" height="52" alt="Ссылка на Пример сайта Пинк">
+      <a class="work-example-item pink-logo" href="blank.html" aria-label="Ссылка на Пример сайта Пинк">
+        <img src="./img/pink-logo.png" width="185" height="52"
+          alt="Логотип сайта Пинк">
       </a>
-      <a class="work-example-item mishka-logo" href="blank.html">
-        <img src="./img/mishka-logo.png" width="173" height="84" alt="Ссылка на Пример сайта Мишка">
+      <a class="work-example-item mishka-logo" href="blank.html" aria-label="Ссылка на Пример сайта Мишка">
+        <img src="./img/mishka-logo.png" width="173" height="84"
+          alt="Логотип сайта Мишка">
       </a>
     </section>
   </main>
@@ -169,20 +172,18 @@
       </section>
     </div>
   </footer>
-  <section class="modal modal-feedback">
+  <section class="modal">
     <h2>Напишите нам</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="feedback-item">
         <label for="name">Ваше имя:</label>
-        <input class="input-field user-name" type="text" name="username" placeholder="Имя Фамилия" id="name" autofocus
-          >
+        <input class="input-field user-name" type="text" name="username" placeholder="Имя Фамилия" id="name">
       </div>
       <div class="feedback-item">
         <label for="email">Ваш email:</label>
-        <input class="input-field user-email" type="email" name="user_email" placeholder="email@example.com" id="email"
-          >
+        <input class="input-field user-email" type="email" name="user_email" placeholder="email@example.com" id="email">
       </div>
-      <div class="feedback-text">
+      <div class="feedback-item">
         <label for="user-feedback">Текст письма:</label>
         <textarea class="input-field user-feedback" name="user_feedback" id="user-feedback"
           placeholder="В свободной форме"></textarea>
@@ -191,7 +192,7 @@
         <button class="button button-send" type="submit" aria-label="Отправить письмо">Отправить</button>
       </div>
     </form>
-    <button class="modal-close" type="button" aria-label="Закрыть">
+    <button class="modal-close" type="button" aria-label="Закрыть форму">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>

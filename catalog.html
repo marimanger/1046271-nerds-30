@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="./img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicon/avicon/favicon-apple.png"><!-- 180×180 -->
   <link href="./css/normalize.min.css" rel="stylesheet">
-  <link href="./css/style.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
   <title>Нёрдс Магазин</title>
 </head>
-
 <body class="page-body catalog-page">
   <header class="main-header">
     <div class="wrapper">
       <nav class="navigation">
-        <a class="header-logo" href="index.html">
+        <a class="header-logo" href="index.html" aria-label="На главную страницу">
           <img src="./img/nerds-logo.svg" width="159" height="65" alt="Логотип дизайн студии Нердс">
         </a>
         <ul class="nav-list">
@@ -29,10 +27,8 @@
         </div>
       </nav>
     </div>
-
     <h1 class="title-catalog">Магазин готовых шаблонов</h1>
   </header>
-
   <main class="main-inner-page main-container">
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -44,15 +40,15 @@
               <div class="scale">
                 <div class="bar" style=" width: 75%;"></div>
               </div>
-              <div class="toggle toggle-min" tabindex="0" style="left: 6%;"></div>
-              <div class="toggle toggle-max" tabindex="0" style="left: 65%;"></div>
+              <div class="toggle toggle-min" tabindex="0" style="left: 6%;" aria-label="Переключить минимальную стоимость"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 65%;" aria-label="Переключить максимальную стоимость"></div>
             </div>
             <div class="price-controls">
               <label for="min-range">
-                от <input type="number" id="min-range" value="0">
+                от <input type="number" id="min-range" value="0" aria-label="Ввести минимальную стоимость">
               </label>
               <label for="max-range">
-                до <input type="number" id="max-range" value="15000">
+                до <input type="number" id="max-range" value="15000" aria-label="Ввести максимальную стоимость">
               </label>
             </div>
           </div>
@@ -107,7 +103,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button-second" type="submit">Показать</button>
+        <button class="button-second" type="submit" aria-label="Показать шаблоны">Показать</button>
       </form>
     </section>
     <div class="sort-catalogue-wrapper">
@@ -116,17 +112,17 @@
         <p>Сортировать:</p>
         <ul class="sort-list">
           <li class="sort-value price sort-current">
-            <a href="#">по цене</a>
+            <a href="#" aria-label="сортировать по цене">по цене</a>
           </li>
           <li class="sort-value type">
-            <a href="#">по типу</a>
+            <a href="#" aria-label="сортировать по типу">по типу</a>
           </li>
           <li class="sort-value name">
-            <a href="#">по названию</a>
+            <a href="#" aria-label="сортировать по названию">по названию</a>
           </li>
         </ul>
         <div class="sort-buttons">
-          <button class="sort-value sort-down sort-current" type="button">
+          <button class="sort-value sort-down sort-current" type="button" aria-label="">
             <span class="visually-hidden">Вниз</span>
           </button>
           <button class=" sort-value sort-up" type="button">
@@ -268,29 +264,27 @@
       </section>
     </div>
   </footer>
-  <section class="modal modal-feedback">
+  <section class="modal">
     <h2>Напишите нам</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="feedback-item">
         <label for="name">Ваше имя:</label>
-        <input class="input-field user-name" type="text" name="username" placeholder="Имя Фамилия" id="name" autofocus
-          required>
+        <input class="input-field user-name" type="text" name="username" placeholder="Имя Фамилия" id="name">
       </div>
       <div class="feedback-item">
         <label for="email">Ваш email:</label>
-        <input class="input-field user-email" type="email" name="user_email" placeholder="email@example.com" id="email"
-          required>
+        <input class="input-field user-email" type="email" name="user_email" placeholder="email@example.com" id="email">
       </div>
-      <div class="feedback-text">
+      <div class="feedback-item">
         <label for="user-feedback">Текст письма:</label>
         <textarea class="input-field user-feedback" name="user_feedback" id="user-feedback"
           placeholder="В свободной форме"></textarea>
       </div>
       <div class="button-send">
-        <button class="button button-send" type="submit">Отправить</button>
+        <button class="button button-send" type="submit" aria-label="Отправить письмо">Отправить</button>
       </div>
     </form>
-    <button class="modal-close" type="button">
+    <button class="modal-close" type="button" aria-label="Закрыть">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>

@@ -704,7 +704,6 @@ body {
 }
 
 
-
 .social-wrapper {
   display: grid;
   grid-gap: 20px;
@@ -779,7 +778,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 760px;
+  width: 960px;
+  box-sizing: border-box;
   padding: 30px 100px 90px;
   position: fixed;
   margin: auto;
@@ -792,7 +792,6 @@ body {
 
 }
 
-
 .modal-appear {
   display: block;
   animation: bounce .6s;
@@ -804,7 +803,6 @@ body {
 
 }
 
-
 .modal h2 {
   font-size: 45px;
   line-height: 55px;
@@ -813,6 +811,7 @@ body {
   margin: 0px;
   margin-top: 30px;
   margin-bottom: 24px;
+
 }
 
 .feedback-form label {
@@ -827,25 +826,40 @@ body {
 }
 
 .feedback-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+
+}
+
+.feedback-item:nth-child(3),
+.feedback-item:last-child {
+  grid-column: 1/-1;
+
+}
+
+
+.input-field {
+  font: inherit;
+  color: var(--modal-text);
+  opacity: 0.5;
+  border: 2px solid var(--modal-border);
+  border-radius: 3px;
+  padding-left: 12px;
 
 }
 
 .feedback-form input[type="text"],
 .feedback-form input[type="email"] {
-  font: inherit;
-  color: var(--modal-text);
-  opacity: 0.5;
-  border: 3px solid var(--modal-border);
-  border-radius: 3px;
-  padding: 10px 165px 10px 5px;
+  width: 342px;
+  height: 45px;
+  margin-bottom: 20px;
 
 }
 
 .feedback-form input:hover {
-  border: 3px solid var(--modal-border-hover);
+  border: 2px solid var(--modal-border-hover);
 
 
 }
@@ -866,6 +880,7 @@ body {
 
 .user-feedback:hover {
   border-color: var(--modal-border-hover);
+
 }
 
 .user-feedback:focus {
@@ -875,28 +890,38 @@ body {
 
 }
 
+.input-field {
+  outline: none;
+
+}
+
 .user-feedback {
   display: block;
-  width: 760px;
-  padding: 15px 10px 70px 10px;
   box-sizing: border-box;
   font: inherit;
   color: var(--modal-text);
   opacity: 0.5;
-  border: 3px solid var(--modal-border);
+  border: 2px solid var(--modal-border);
   border-radius: 3px;
   resize: none;
 
 }
 
-.user-feedback textarea {
-  padding: 12px 20px;
+.feedback-item textarea{
+  width: 100%;
+  height: 118px;
+  padding-top: 13px;
 
 }
 
+.feedback-item:nth-child(3) {
+  margin-bottom: 45px;
+
+}
+
+
 .button-send .button {
   width: 260px;
-  margin-top: 48px;
   cursor: pointer;
 
 }
