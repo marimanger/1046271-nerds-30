@@ -6,12 +6,9 @@
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="./img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicon/avicon/favicon-apple.png"><!-- 180×180 -->
-  <link href="./css/normalize.css" rel="stylesheet">
-  <link href="./css/style.min.css" rel="stylesheet">
+  <link href="./css/normalize.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
   <title>Нёрдс Магазин</title>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=23a546b3-b588-4e34-b2a7-1017ad34c8c3&lang=ru_RU"
-  type="text/javascript"></script>
-
 </head>
 
 <body class="page-body catalog-page">
@@ -227,17 +224,17 @@
       <section class="contact-info">
         <h3>Nerds Design Studio</h3>
         <p class="address"> 191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-        <p class="phone-number">тел.<a href="tel:+78126660266">+7 (812) 666-02-66</a></p>
+        <p class="phone-number">тел.<a href="tel:+78126660266"
+          aria-label="Номер телефона дизайн студии Нердс +7 (812) 275-75-75">+7 (812) 666-02-66</a></p>
         <a class="button" href="blank.html">Напишите нам</a>
       </section>
     </div>
   </div>
   <footer class="main-footer">
-
     <div class="social-wrapper">
       <ul class="footer-social">
         <li>
-          <a class="social-button vk" href="https://vk.com/">
+          <a class="social-button vk" href="https://vk.com/" aria-label="Ссылка на страницу в Вконтакте">
             <span class="visually-hidden">Вконтакте</span>
             <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -247,7 +244,7 @@
           </a>
         </li>
         <li>
-          <a class="social-button fb" href="https://www.facebook.com">
+          <a class="social-button fb" href="https://www.facebook.com" aria-label="Ссылка на страницу Фейсбук">
             <span class="visually-hidden">Фейсбук</span>
             <svg width="12px" height="22px" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="#fff" />
@@ -255,7 +252,7 @@
           </a>
         </li>
         <li>
-          <a class="social-button inst" href="https://www.instagram.com">
+          <a class="social-button inst" href="https://www.instagram.com" aria-label="Ссылка на страницу Инстаграм">
             <span class="visually-hidden">Инстаграм</span>
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -297,6 +294,8 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=23a546b3-b588-4e34-b2a7-1017ad34c8c3&lang=ru_RU"
+  type="text/javascript"></script>
   <script src="js/script.min.js"></script>
 </body>
 
