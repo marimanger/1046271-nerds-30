@@ -547,6 +547,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: middle;
   margin: 0;
   padding: 25px 0px;
   display: inline-block;
@@ -602,7 +603,6 @@ body {
   margin-bottom: 32px;
 }
 
-/* Come back here */
 .work-example-item {
   position: relative;
 }
@@ -635,7 +635,6 @@ body {
   opacity: 0.1;
 
 }
-
 
 /* Footer */
 
@@ -777,8 +776,6 @@ body {
 
 .modal {
   display: none;
-  background-color: var(--main-bg-color);
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -790,13 +787,23 @@ body {
   max-height: 90vh;
   transition: 0.5s transform;
   z-index:3;
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
 
 }
+
 
 .modal-appear {
   display: block;
+  animation: bounce .6s;
 
 }
+
+.modal-error {
+  animation: shake .6s;
+
+}
+
 
 .modal h2 {
   font-size: 45px;
@@ -1437,5 +1444,34 @@ opacity: 0.3;
   color: rgba(0, 0, 0, 0.4)
 }
 
+/* Animation */
 
+@keyframes bounce {
+  0% {
+    transform: translate(-50%,-200%);
+  }
 
+  70% {
+    transform: translate(-50%,-35%);
+  }
+
+  90% {
+    transform: translate(-50%,-65%);
+  }
+
+  100% {
+    transform: translate(-50%,-50%);
+  }
+}
+
+@keyframes shake{
+  0%, 100% {
+    transform: translate(-50%,-50%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-55%,-50%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(-50%,-50%);
+  }
+}

@@ -2,19 +2,46 @@
 const btn = document.querySelector(".contact-info .button");
 const popup = document.querySelector(".modal");
 const close = document.querySelector(".modal-close");
-const username = popup.querySelector("[name=username]")
+const form = popup.querySelector(".feedback-form");
+const username = popup.querySelector("[name=username]");
+const email = popup.querySelector("[name=user_email");
+const message = popup.querySelector("[name=user_feedback]");
+
+let isStorageSupport = true;
+let usernameFromStorage = "";
+let emailFromStorage = "";
+
+try {
+  usernameFromStorage = localStorage.getItem("username");
+  emailFromStorage = localStorage.getItem("email");
+} catch (err) {
+  isStorageSupport = false;
+
+};
 
 
 btn.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-appear");
-  username.focus();
+  if (usernameFromStorage) {
+    if (usernameFromStorage) {
+    username.value = usernameFromStorage;
+    email.focus();
+    } else {
+    email.value = emailFromStorage;
+    message.focus();
+    }
+    } else {
+    username.focus();
+    }
 
 });
+
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-appear");
+  popup.classList.remove("modal-error");
 
 });
 
@@ -24,11 +51,32 @@ window.addEventListener("keydown", function (evt) {
     if (popup.classList.contains("modal-appear")) {
       evt.preventDefault();
       popup.classList.remove("modal-appear");
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("name", username.value);
+      }
     }
 
   }
 
 });
+
+form.addEventListener("submit", function (evt) {
+  if (!username.value || !email.value || !message.value) {
+    evt.preventDefault();
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-error");
+
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("username", username.value);
+    }
+  }
+
+});
+
+
 
 // The ymaps.ready() function will be called when
 // all the API components are loaded and the DOM tree is generated.
@@ -50,7 +98,7 @@ function init() {
   siteMap.behaviors.disable("scrollZoom");
 
 
-// Creating a placemark.
+  // Creating a placemark.
   sitePlacemark = new ymaps.Placemark(siteMap.getCenter(), {
     hintContent: "NЁRDS DESIGN STUDIO, 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
   }, {
